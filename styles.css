@@ -7,13 +7,19 @@ body {
     text-transform: lowercase;
 }
 
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-h1#logo{
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+h1#logo {
     font-weight: 900;
     font-size: 4.236em;
     color: #FF501E;
