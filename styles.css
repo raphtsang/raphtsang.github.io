@@ -1,4 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* Golden Ratio 1.618 2.618 4.236 6.854 11.089 17.942 */
 body {
+    background-color: #EEEEE7;
     font-family: "Inter", sans-serif;
+    font-size: 11px;
+    text-transform: lowercase;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1#logo{
+    font-weight: 700;
+    font-size: 4.236em;
+    color: #FF501E;
+}
+
+h1#logo em {
+    font-weight: 300;
+    font-style: normal;
+    color: #373234;
 }
