@@ -7,16 +7,22 @@ body {
     text-transform: lowercase;
 }
 
-.navbar {
+.cluster {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+.cluster > * {
+    margin: 0.5rem;
+}
+
+.menu-btn {
+    text-decoration: none;
+    color: #373234;
+    font-size: 1.618em;
 }
 
 h1#logo {
@@ -30,3 +36,19 @@ h1#logo em {
     font-style: normal;
     color: #373234;
 }
+
+
+
+
+
+
+
+
+
+
+/* icons */
+.lnr {
+    color: #373234;
+    font-size: 1.618rem;
+    font-weight: 400;
+  }
