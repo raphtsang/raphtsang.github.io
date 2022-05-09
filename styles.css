@@ -79,7 +79,7 @@ h1 {
 
 h2 {
     font-size: 4.236em;
-    font-weight: 700;
+    font-weight: 900;
     color: var(--color-black);
 }
 
@@ -160,6 +160,10 @@ h3 {
     flex-basis: 0;
 }
 
+.main-collection-txt {
+    font-weight: 600;
+}
+
 .img-fit {
     object-fit: cover;
     border-radius: 8px;
@@ -170,7 +174,15 @@ h3 {
 }
 
 .btn-cta {
+    color: var(--color-black);
     background-color: white;
+}
+
+.btn-cta:hover {
+    transition: all 0.25s ease-in-out;
+    color: white;
+    background-image: radial-gradient(farthest-side at 0% 0%, var(--color-80secondary) 0%, var(--color-80primary) 125%);
+    /* background-color: var(--color-80primary); */
 }
 
 .btn-primary {
