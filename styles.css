@@ -16,16 +16,11 @@ body {
     font-size: 11px;
     text-transform: lowercase;
 }
-
+/* NAVBAR */
 nav {
     box-shadow: 0 2px 8px 0px #37323450;
     padding: 2.618em;
 }
-
-/* nav > * {
-    flex: 1;
-    flex-basis: 0;
-} */
 
 .cluster {
     display: flex;
@@ -34,10 +29,6 @@ nav {
     align-items: center;
     flex-direction: row;
 }
-
-/* .cluster > * {
-    margin: 0.5rem;
-} */
 
 .nav-logo--menu {
     flex: 1;
@@ -78,10 +69,18 @@ h1#logo em {
     color: var(--color-black);
 }
 
+/* END OF NAVBAR */
+
 h1 {
     font-size: 6.854em;
     font-weight: 900;
     color: var(--color-primary);
+}
+
+h2 {
+    font-size: 4.236em;
+    font-weight: 700;
+    color: var(--color-black);
 }
 
 h3 {
@@ -117,6 +116,7 @@ h3 {
 
 .hero-img {
   padding: 0 1.618em 0 0;
+  height: 50em;
 }
 
 .sidebar-txt > * + * {
@@ -142,6 +142,32 @@ h3 {
     width: 88%;
 }
 
+.main-collection {
+    padding: 4.618em 8.6em 2em 8.6em;
+}
+
+.main-collection > * + * {
+    margin-top: 1rem;
+}
+
+.main-collection-img-container {
+    justify-content: space-between;
+    gap: 1.618em;
+}
+
+.main-collection-img {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.img-fit {
+    object-fit: cover;
+}
+
+.collection-preview {
+    height: 30em;
+}
+
 .btn-cta {
     background-color: white;
 }
@@ -154,6 +180,11 @@ h3 {
     background-image: radial-gradient(farthest-side at 0% 0%, F3F3F3 0%, E3E3E3 125%);
 }
 
+.stack{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
 
 
 
