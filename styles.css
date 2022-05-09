@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /* Golden Ratio 1.618 2.618 4.236 6.854 11.089 17.942 */
+
+:root{
+    --color-bg: #EEEEE7;
+    --color-black: #373234;
+    --color-primary: #FF501E;
+    --color-secondary: #FFAF55;
+    --color-80primary: #FF501ECC;
+    --color-80secondary: #FFAF55CC;
+}
+
 body {
     background-color: #EEEEE7;
     font-family: "Inter", sans-serif;
@@ -51,7 +61,7 @@ a {
 }
 
 .menu-btn {
-    color: #373234;
+    color: var(--color-black);
     font-size: 1.618em;
     margin: 0 1em 0 1em;
 }
@@ -59,30 +69,29 @@ a {
 h1#logo {
     font-weight: 900;
     font-size: 3em;
-    color: #FF501E;
+    color: var(--color-primary);
 }
 
 h1#logo em {
     font-weight: 300;
     font-style: normal;
-    color: #373234;
+    color: var(--color-black);
 }
 
 h1 {
     font-size: 6.854em;
     font-weight: 900;
-    color: #FF501E;
+    color: var(--color-primary);
 }
 
 h3 {
-    font-size: 1.618em;
+    font-size: 2em;
     font-weight: 700;
-    color: #373234;
+    color: var(--color-black);
 }
 
 .sidebar-container{
-    /* width: 100%; */
-    padding: 0 6.6em 0 6.6em;
+    padding: 2.618em 6.6em 0 6.6em;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -90,13 +99,14 @@ h3 {
 
 .sidebar{
     flex-basis: 40rem;
+    padding-right: 30rem;
     flex-grow: 1;
 }
 
 .not-sidebar{
     flex-basis: 0;
     flex-grow: 999;
-    min-width: 50%;
+    min-width: 40%;
 }
                 
 .hero-cta {
@@ -106,28 +116,57 @@ h3 {
 }
 
 .hero-img {
-  padding: 3em;
+  padding: 0 1.618em 0 0;
 }
 
-.hero-cta > * + * {
+.sidebar-txt > * + * {
     margin-top: 1rem;
 }
 
+.sidebar-txt > h3 {
+    line-height: 120%;
+}
 
+.sidebar-txt {
+    max-width: 28rem;
+}
+
+.hero-btn {
+    font-size: 2.618em;
+    /* font-weight: 300; */
+    padding: 1.618rem;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 88%;
+}
+
+.btn-secondary {
+    background-color: white;
+}
+
+.btn-primary {
+    background-image: radial-gradient(farthest-side at 0% 0%, var(--color-80secondary) 0%, var(--color-80primary) 125%);
+}
+
+.btn-secondary {
+    background-image: radial-gradient(farthest-side at 0% 0%, F3F3F3 0%, E3E3E3 125%);
+}
 
 
 
 
 /* icons */
 .lnr {
-    color: #373234;
+    color: var(--color-black);
     font-size: 1.618rem;
     font-weight: 400;
     margin: 0.2em;
 }
 
 .lnr-phone {
-    margin: 0 0.5em 0 1em;
+    margin: 0 0.5em 0 0.5em;
 }
 
 .lnr-menu {
