@@ -162,6 +162,7 @@ h3 {
 
 .img-fit {
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .collection-preview {
