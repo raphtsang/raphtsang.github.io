@@ -68,13 +68,13 @@ a {
     margin: 0 1em 0 1em;
 }
 
-a#logo {
+a.logo {
     font-weight: 900;
     font-size: 3em;
     color: var(--color-primary);
 }
 
-a#logo em {
+a.logo em {
     font-weight: 300;
     font-style: normal;
     color: var(--color-black);
@@ -386,6 +386,34 @@ h3 {
     margin: 0em;
 }
 
+/* FOOTER */
+footer{
+    background-color: var(--color-black);
+    height: 20vh;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+}
+
+footer a.logo em {
+    font-weight: 300;
+    font-style: normal;
+    color: var(--color-bg);
+}
+
+.footer > .content{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.footer > .content > .logo{
+    font-size: 1.8em;
+}
 
 /* templates btn stack */
 .btn-cta {
