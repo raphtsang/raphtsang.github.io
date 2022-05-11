@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/styles.css">
     <!-- to import icons from linearicons from https://linearicons.com/ -->
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <title>Furniture Galore</title>
@@ -14,16 +14,16 @@
     <nav class="cluster">
         <div class="nav-logo--menu cluster">
             <a class="lnr lnr-menu" href="#"></a>
-            <h1 id="logo">Furniture<em>Galore</em></h1>
+            <a id="logo" href="/index.html">Furniture<em>Galore</em></a>
         </div>
         <div class="nav-items">
             <ul class="cluster">
                 <li>
-                    <a class="menu-btn" href="#">New</a>
-                    <a class="menu-btn" href="#">Lounge</a>
-                    <a class="menu-btn" href="#">Dining</a>
-                    <a class="menu-btn" href="#">Bedroom</a>
-                    <a class="menu-btn" href="#">Outdoor</a>
+                    <a class="menu-btn" href="/html/collection.html">New</a>
+                    <a class="menu-btn" href="/html/collection.html">Lounge</a>
+                    <a class="menu-btn" href="/html/collection.html">Dining</a>
+                    <a class="menu-btn" href="/html/collection.html">Bedroom</a>
+                    <a class="menu-btn" href="/html/collection.html">Outdoor</a>
                     <a class="menu-btn" href="#">Rooms</a>
                 </li>
             </ul>
@@ -42,7 +42,7 @@
     <div class="hero sidebar-container">
         <div class="hero-cta sidebar">
             <div class="sidebar-txt">
-                <h1>Catchy,<br>New items!</h1>
+                <h1 class="hero-title">Catchy,<br>New items!</h1>
                 <h3>Browse our newest collection <br>and never seen before deals!</h3>
                 <a class="hero-btn btn-cta" href="#">Shop Now</a>
             </div>
@@ -50,22 +50,52 @@
             <img src="./res/img/hero-img.jpg" alt="image of sofa and coffee table" class="hero-img not-sidebar img-fit">
         </div>
     </div>
-    <div class="main-collection">
+    <div class="main-collection padding">
         <h2>Our Collections</h2>
-            <div class="main-collection-img-container cluster">
-                <div class="main-collection-img stack">
+        <div class="main-collection-img-container cluster">
+            <div class="main-collection-img stack" onclick="location.href='./html/collection.html';" style="cursor: pointer;">
                 <img src="./res/img/khloe.jpg" alt="image of sofa" class="img-fit collection-preview">
                 <h3 class="main-collection-txt">Lounge</h3>
-                </div>
-                
-                <div class="main-collection-img stack">
+            </div>
+            
+            <div class="main-collection-img stack" onclick="location.href='#';" style="cursor: pointer;">
                 <img src="./res/img/bedroom.jpg" alt="image of sofa" class="img-fit collection-preview">
                 <h3 class="main-collection-txt">Bedroom</h3>
-                </div>
+            </div>
 
-                <div class="main-collection-img stack">
+            <div class="main-collection-img stack" onclick="location.href='#';" style="cursor: pointer;">
                 <img src="./res/img/dining.jpg" alt="image of sofa" class="img-fit collection-preview">
                 <h3 class="main-collection-txt">Dining</h3>
+            </div>
+        </div>
+    </div>
+    <div class="main-deals padding">
+        <h2>Our Best Deals</h2>
+        <div class="main-deals-card-container cluster">
+            <div class="main-deals-card">
+                <img src="./res/img/st-mortiz-three-seater.jpg" alt="image of sofa" class="img-fit deals-preview">
+                <div class="main-deals-txt">
+                    <h3 class="large-card-title">St Mortiz Three-Seater</h3>
+                    <h3 class="price">$999</h3>
+                    <h4>full grain leather, three-seater sofa</h4>
+                </div>
+            </div>
+
+            <div class="main-deals-card">
+                <img src="./res/img/marbella-longboy.jpg" alt="image of sofa" class="img-fit deals-preview">
+                <div class="main-deals-txt">
+                    <h3 class="large-card-title">Marbella Longboy</h3>
+                    <h3 class="price">$999</h3>
+                    <h4>suede three-seater sofa</h4>
+                </div>
+            </div>
+
+            <div class="main-deals-card">
+                <img src="./res/img/st-mortiz-sideboard.jpg" alt="image of sofa" class="img-fit deals-preview">
+                <div class="main-deals-txt">
+                    <h3 class="large-card-title">St Mortiz Sideboard</h3>
+                    <h3 class="price">$999</h3>
+                    <h4>pine sideboard with inset handles</h4>
                 </div>
             </div>
         </div>
