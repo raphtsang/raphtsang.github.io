@@ -4,6 +4,7 @@
 :root{
     --color-bg: #EEEEE7;
     --color-black: #373234;
+    --color-grey: #9a9a9a;
     --color-primary: #FF501E;
     --color-secondary: #FFAF55;
     --color-80primary: #FF501ECC;
@@ -335,7 +336,7 @@ h3 {
     object-position: 50% 80%;
 }
 
-.add-to-cart {
+/* .add-to-cart {
     background-color: var(--color-bg);
     width: min-content;
     display: flex;
@@ -345,14 +346,98 @@ h3 {
     right: 2em;
 }
 
-.cart-btn {
-    font-size: 2.34rem !important;
+.add-to-cart:hover {
+    background-color: #373234;
+}
+
+.add-to-cart:hover .lnr-cart {
+    color: var(--color-80secondary);    
+} */
+
+.heart-btn-container {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+}
+
+input[type="checkbox"] + .lnr-heart{
+    color: var(--color-black);
+    font-size: 2.5em;
+    border-radius: 8px;
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    transition: all 120ms ease;
+    z-index: 1;
+}
+
+input[type="checkbox"] +.lnr-heart:hover {
+    color: var(--color-grey);
+}
+
+input[type="checkbox"]:checked + .lnr-heart{
+    /* color: white; */
+    content: "";
+}
+
+.svg-heart {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    left: 0;
+    z-index: -1;
+    visibility: hidden;
+}
+
+input[type="checkbox"]:checked + .lnr-heart > .svg-heart {
+    visibility: visible;
+}
+
+.cart-btn-container {
+    position: absolute;
+    bottom: 0.5em;
+    right: 0.5em;
+}
+
+input[type="checkbox"] + .lnr-cart{
+    color: var(--color-black);
+    font-size: 3em;
+    padding: 0.3em;
+    border-radius: 8px;
+    background-color: var(--color-bg);
+    position: absolute;
+    bottom: 0.5em;
+    right: 0.5em;
+    transition: all 120ms ease;
+}
+
+input[type="checkbox"] +.lnr-cart:hover {
+    background-color: var(--color-black);
+    color: var(--color-80secondary);
+}
+
+input[type="checkbox"]:checked + .lnr-cart{
+    color: white;
+    background-color: var(--color-grey);
+    content: "";
+}
+
+/* .cart-btn {
+    font-size: 3em !important;
 }
 
 .heart-toggle {
     position: absolute;
     top: 1em;
     right: 1em;
+} */
+
+.featured-product-card-details > h4{
+    align-items: baseline;
 }
 
 .filters {
