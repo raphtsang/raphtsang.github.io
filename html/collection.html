@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/reset.css">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <!-- to import icons from linearicons from https://linearicons.com/ -->
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <title>Sofas | Furniture Galore</title>
@@ -44,12 +44,20 @@
         <div class="featured-product-card-container cluster">
             <div class="featured-product-card">
                 <div class="featured-product-card-content">
-                    <h3 class="large-card-title" onclick="location.href='/html/product.html';" style="cursor: pointer;">St Mortiz Three-Seater</h3>
-                    <h3 class="price" onclick="location.href='/html/product.html';" style="cursor: pointer;">$999</h3>
-                    <h4 onclick="location.href='/html/product.html';" style="cursor: pointer;">full-grain leather, three-seater sofa</h4>
+                    <h3 class="large-card-title" onclick="goProduct()" style="cursor: pointer;">St Mortiz Three-Seater</h3>
+                    <h3 class="price" onclick="goProduct()" style="cursor: pointer;">$999</h3>
+                    <h4 onclick="goProduct()" style="cursor: pointer;">full-grain leather, three-seater sofa</h4>
                     <h5>colour/material</h5>
-                    <div class="colour-picker">
+                    <div class="color-picker">
                         <!-- INSERT COLOUR PICKER -->
+                        <div class="color-swatch tawny" onclick="currentSwatch(1)"></div>
+                        <div class="color-swatch charcoal" onclick="currentSwatch(2)"></div>
+                        <div class="color-swatch chestnut" onclick="currentSwatch(3)"></div>
+                        <div class="color-swatch lapis" onclick="currentSwatch(4)"></div>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
                     </div>
                     <!-- <a class="lnr lnr-heart heart-toggle" href="#"></a> -->
                     <label class="heart-btn-container">
@@ -68,16 +76,24 @@
                     </label>
                         <!-- <a class="lnr lnr-cart cart-btn" href="#"></a> -->
                 </div>
-                <img src="/res/img/st-mortiz-three-seater.jpg" alt="image of sofa" class="featured-product-img img-fit featured-st-mortiz" onclick="location.href='/html/product.html';" style="cursor: pointer;">
+                <img src="/res/img/st-mortiz-three-seater.jpg" alt="image of sofa" class="featured-product-img img-fit featured-st-mortiz" onclick="goProduct()" style="cursor: pointer;">
             </div>
             <div class="featured-product-card last-card">
                 <div class="featured-product-card-content">
-                    <h3 class="large-card-title" onclick="location.href='/html/product.html';" style="cursor: pointer;">Marbella Longboy</h3>
-                    <h3 class="price" onclick="location.href='/html/product.html';" style="cursor: pointer;">$999</h3>
-                    <h4 onclick="location.href='/html/product.html';" style="cursor: pointer;">suede leather four-seater sofa</h4>
+                    <h3 class="large-card-title" onclick="goProduct()" style="cursor: pointer;">Marbella Longboy</h3>
+                    <h3 class="price" onclick="goProduct()" style="cursor: pointer;">$999</h3>
+                    <h4 onclick="goProduct()" style="cursor: pointer;">suede leather four-seater sofa</h4>
                     <h5>colour/material</h5>
-                    <div class="colour-picker">
+                    <div class="color-picker">
                         <!-- INSERT COLOUR PICKER -->
+                        <div class="color-swatch tawny" onclick="currentSwatch(1)"></div>
+                        <div class="color-swatch charcoal" onclick="currentSwatch(2)"></div>
+                        <div class="color-swatch chestnut" onclick="currentSwatch(3)"></div>
+                        <div class="color-swatch lapis" onclick="currentSwatch(4)"></div>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
                     </div>
                     <!-- <a class="lnr lnr-heart heart-toggle" href="#"></a> -->
                     <label class="heart-btn-container">
@@ -96,7 +112,7 @@
                     </label>
                         <!-- <a class="lnr lnr-cart cart-btn" href="#"></a> -->
                 </div>
-                <img src="/res/img/marbella-longboy.jpg" alt="image of sofa" class="featured-product-img img-fit featured-marbella" onclick="location.href='/html/product.html';" style="cursor: pointer;">
+                <img src="/res/img/marbella-longboy.jpg" alt="image of sofa" class="featured-product-img img-fit featured-marbella" onclick="goProduct()" style="cursor: pointer;">
             </div>
         </div>
     </div>
@@ -141,14 +157,22 @@
                         </span>
                     </span>
                 </label>
-                <img src="/res/img/cancun.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="location.href='/html/product.html';" style="cursor: pointer;">
+                <img src="/res/img/cancun.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="goProduct()" style="cursor: pointer;">
                 <div class="sofa-card-content">
-                    <h4 onclick="location.href='/html/product.html';" style="cursor: pointer;">Cancun loveseat</h4>
-                    <h4 class="price" onclick="location.href='/html/product.html';" style="cursor: pointer;">$999</h4>
-                    <h5 onclick="location.href='/html/product.html';" style="cursor: pointer;">firm fabric two-seater sofa</h5>
+                    <h4 onclick="goProduct()" style="cursor: pointer;">Cancun loveseat</h4>
+                    <h4 class="price" onclick="goProduct()" style="cursor: pointer;">$999</h4>
+                    <h5 onclick="goProduct()" style="cursor: pointer;">firm fabric two-seater sofa</h5>
                     <span></span>
                     <div class="color-picker">
-                        <!-- INSERT COLOR PICKER -->
+                        <!-- INSERT COLOUR PICKER -->
+                        <div class="color-swatch tawny" onclick="currentSwatch(1)"></div>
+                        <div class="color-swatch charcoal" onclick="currentSwatch(2)"></div>
+                        <div class="color-swatch chestnut" onclick="currentSwatch(3)"></div>
+                        <div class="color-swatch lapis" onclick="currentSwatch(4)"></div>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
                     </div>
                     <!-- <a class="lnr lnr-heart heart-toggle" href="#"></a> -->
                     <label class="cart-btn-container">
@@ -186,14 +210,22 @@
                         </span>
                     </span>
                 </label>
-                <img src="/res/img/khloe.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="location.href='/html/product.html';" style="cursor: pointer;">
+                <img src="/res/img/khloe.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="goProduct()" style="cursor: pointer;">
                 <div class="sofa-card-content">
-                    <h4 onclick="location.href='/html/product.html';" style="cursor: pointer;">Khloe three-seater</h4>
-                    <h4 class="price" onclick="location.href='/html/product.html';" style="cursor: pointer;">$999</h4>
-                    <h5 onclick="location.href='/html/product.html';" style="cursor: pointer;">full-grain leather, three-seater sofa</h5>
+                    <h4 onclick="goProduct()" style="cursor: pointer;">Khloe three-seater</h4>
+                    <h4 class="price" onclick="goProduct()" style="cursor: pointer;">$999</h4>
+                    <h5 onclick="goProduct()" style="cursor: pointer;">full-grain leather, three-seater sofa</h5>
                     <span></span>
                     <div class="color-picker">
-                        <!-- INSERT COLOR PICKER -->
+                        <!-- INSERT COLOUR PICKER -->
+                        <div class="color-swatch tawny" onclick="currentSwatch(1)"></div>
+                        <div class="color-swatch charcoal" onclick="currentSwatch(2)"></div>
+                        <div class="color-swatch chestnut" onclick="currentSwatch(3)"></div>
+                        <div class="color-swatch lapis" onclick="currentSwatch(4)"></div>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
                     </div>
                     <!-- <a class="lnr lnr-heart heart-toggle" href="#"></a> -->
                     <label class="cart-btn-container">
@@ -231,14 +263,22 @@
                         </span>
                     </span>
                 </label>
-                <img src="/res/img/antonyan.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="location.href='/html/product.html';" style="cursor: pointer;">
+                <img src="/res/img/antonyan.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="goProduct()" style="cursor: pointer;">
                 <div class="sofa-card-content">
-                    <h4 onclick="location.href='/html/product.html';" style="cursor: pointer;">antonyan armchair</h4>
-                    <h4 class="price" onclick="location.href='/html/product.html';" style="cursor: pointer;">$999</h4>
-                    <h5 onclick="location.href='/html/product.html';" style="cursor: pointer;">full-grain leather, three-seater sofa</h5>
+                    <h4 onclick="goProduct()" style="cursor: pointer;">antonyan armchair</h4>
+                    <h4 class="price" onclick="goProduct()" style="cursor: pointer;">$999</h4>
+                    <h5 onclick="goProduct()" style="cursor: pointer;">full-grain leather, three-seater sofa</h5>
                     <span></span>
                     <div class="color-picker">
-                        <!-- INSERT COLOR PICKER -->
+                        <!-- INSERT COLOUR PICKER -->
+                        <div class="color-swatch tawny" onclick="currentSwatch(1)"></div>
+                        <div class="color-swatch charcoal" onclick="currentSwatch(2)"></div>
+                        <div class="color-swatch chestnut" onclick="currentSwatch(3)"></div>
+                        <div class="color-swatch lapis" onclick="currentSwatch(4)"></div>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
                     </div>
                     <!-- <a class="lnr lnr-heart heart-toggle" href="#"></a> -->
                     <label class="cart-btn-container">
@@ -276,14 +316,22 @@
                         </span>
                     </span>
                 </label>
-                <img src="/res/img/warden.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="location.href='/html/product.html';" style="cursor: pointer;">
+                <img src="/res/img/warden.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="goProduct()" style="cursor: pointer;">
                 <div class="sofa-card-content">
-                    <h4 onclick="location.href='/html/product.html';" style="cursor: pointer;">Warden contemporary</h4>
-                    <h4 class="price" onclick="location.href='/html/product.html';" style="cursor: pointer;">$999</h4>
-                    <h5 onclick="location.href='/html/product.html';" style="cursor: pointer;">full-grain leather, three-seater sofa</h5>
+                    <h4 onclick="goProduct()" style="cursor: pointer;">Warden contemporary</h4>
+                    <h4 class="price" onclick="goProduct()" style="cursor: pointer;">$999</h4>
+                    <h5 onclick="goProduct()" style="cursor: pointer;">full-grain leather, three-seater sofa</h5>
                     <span></span>
                     <div class="color-picker">
-                        <!-- INSERT COLOR PICKER -->
+                        <!-- INSERT COLOUR PICKER -->
+                        <div class="color-swatch tawny" onclick="currentSwatch(1)"></div>
+                        <div class="color-swatch charcoal" onclick="currentSwatch(2)"></div>
+                        <div class="color-swatch chestnut" onclick="currentSwatch(3)"></div>
+                        <div class="color-swatch lapis" onclick="currentSwatch(4)"></div>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
                     </div>
                     <!-- <a class="lnr lnr-heart heart-toggle" href="#"></a> -->
                     <label class="cart-btn-container">
@@ -321,14 +369,22 @@
                         </span>
                     </span>
                 </label>
-                <img src="/res/img/olaf.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="location.href='/html/product.html';" style="cursor: pointer;">
+                <img src="/res/img/olaf.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="goProduct()" style="cursor: pointer;">
                 <div class="sofa-card-content">
-                    <h4 onclick="location.href='/html/product.html';" style="cursor: pointer;">Olaf three-seater</h4>
-                    <h4 class="price" onclick="location.href='/html/product.html';" style="cursor: pointer;">$999</h4>
-                    <h5 onclick="location.href='/html/product.html';" style="cursor: pointer;">snow hite soft fabric sofa</h5>
+                    <h4 onclick="goProduct()" style="cursor: pointer;">Olaf three-seater</h4>
+                    <h4 class="price" onclick="goProduct()" style="cursor: pointer;">$999</h4>
+                    <h5 onclick="goProduct()" style="cursor: pointer;">snow hite soft fabric sofa</h5>
                     <span></span>
                     <div class="color-picker">
-                        <!-- INSERT COLOR PICKER -->
+                        <!-- INSERT COLOUR PICKER -->
+                        <div class="color-swatch tawny" onclick="currentSwatch(1)"></div>
+                        <div class="color-swatch charcoal" onclick="currentSwatch(2)"></div>
+                        <div class="color-swatch chestnut" onclick="currentSwatch(3)"></div>
+                        <div class="color-swatch lapis" onclick="currentSwatch(4)"></div>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
                     </div>
                     <!-- <a class="lnr lnr-heart heart-toggle" href="#"></a> -->
                     <label class="cart-btn-container">
@@ -366,14 +422,22 @@
                         </span>
                     </span>
                 </label>
-                <img src="/res/img/st-mortiz-three-seater.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="location.href='/html/product.html';" style="cursor: pointer;">
+                <img src="/res/img/st-mortiz-three-seater.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="goProduct()" style="cursor: pointer;">
                 <div class="sofa-card-content">
-                    <h4 onclick="location.href='/html/product.html';" style="cursor: pointer;">St mortiz three-seater</h4>
-                    <h4 class="price" onclick="location.href='/html/product.html';" style="cursor: pointer;">$999</h4>
-                    <h5 onclick="location.href='/html/product.html';" style="cursor: pointer;">full-grain leather, three-seater sofa</h5>
+                    <h4 onclick="goProduct()" style="cursor: pointer;">St mortiz three-seater</h4>
+                    <h4 class="price" onclick="goProduct()" style="cursor: pointer;">$999</h4>
+                    <h5 onclick="goProduct()" style="cursor: pointer;">full-grain leather, three-seater sofa</h5>
                     <span></span>
                     <div class="color-picker">
-                        <!-- INSERT COLOR PICKER -->
+                        <!-- INSERT COLOUR PICKER -->
+                        <div class="color-swatch tawny" onclick="currentSwatch(1)"></div>
+                        <div class="color-swatch charcoal" onclick="currentSwatch(2)"></div>
+                        <div class="color-swatch chestnut" onclick="currentSwatch(3)"></div>
+                        <div class="color-swatch lapis" onclick="currentSwatch(4)"></div>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
                     </div>
                     <!-- <a class="lnr lnr-heart heart-toggle" href="#"></a> -->
                     <label class="cart-btn-container">
@@ -411,14 +475,22 @@
                         </span>
                     </span>
                 </label>
-                <img src="/res/img/st-kilda.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="location.href='/html/product.html';" style="cursor: pointer;">
+                <img src="/res/img/st-kilda.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="goProduct()" style="cursor: pointer;">
                 <div class="sofa-card-content">
-                    <h4 onclick="location.href='/html/product.html';" style="cursor: pointer;">St kilda two-seater</h4>
-                    <h4 class="price" onclick="location.href='/html/product.html';" style="cursor: pointer;">$999</h4>
-                    <h5 onclick="location.href='/html/product.html';" style="cursor: pointer;">fashioned fabric sofa</h5>
+                    <h4 onclick="goProduct()" style="cursor: pointer;">St kilda two-seater</h4>
+                    <h4 class="price" onclick="goProduct()" style="cursor: pointer;">$999</h4>
+                    <h5 onclick="goProduct()" style="cursor: pointer;">fashioned fabric sofa</h5>
                     <span></span>
                     <div class="color-picker">
-                        <!-- INSERT COLOR PICKER -->
+                        <!-- INSERT COLOUR PICKER -->
+                        <div class="color-swatch tawny" onclick="currentSwatch(1)"></div>
+                        <div class="color-swatch charcoal" onclick="currentSwatch(2)"></div>
+                        <div class="color-swatch chestnut" onclick="currentSwatch(3)"></div>
+                        <div class="color-swatch lapis" onclick="currentSwatch(4)"></div>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
                     </div>
                     <!-- <a class="lnr lnr-heart heart-toggle" href="#"></a> -->
                     <label class="cart-btn-container">
@@ -456,14 +528,22 @@
                         </span>
                     </span>
                 </label>
-                <img src="/res/img/marbella-longboy.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="location.href='/html/product.html';" style="cursor: pointer;">
+                <img src="/res/img/marbella-longboy.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="goProduct()" style="cursor: pointer;">
                 <div class="sofa-card-content">
-                    <h4 onclick="location.href='/html/product.html';" style="cursor: pointer;">marbella longboy</h4>
-                    <h4 class="price" onclick="location.href='/html/product.html';" style="cursor: pointer;">$999</h4>
-                    <h5 onclick="location.href='/html/product.html';" style="cursor: pointer;">suede leather four-seater sofa</h5>
+                    <h4 onclick="goProduct()" style="cursor: pointer;">marbella longboy</h4>
+                    <h4 class="price" onclick="goProduct()" style="cursor: pointer;">$999</h4>
+                    <h5 onclick="goProduct()" style="cursor: pointer;">suede leather four-seater sofa</h5>
                     <span></span>
                     <div class="color-picker">
-                        <!-- INSERT COLOR PICKER -->
+                        <!-- INSERT COLOUR PICKER -->
+                        <div class="color-swatch tawny" onclick="currentSwatch(1)"></div>
+                        <div class="color-swatch charcoal" onclick="currentSwatch(2)"></div>
+                        <div class="color-swatch chestnut" onclick="currentSwatch(3)"></div>
+                        <div class="color-swatch lapis" onclick="currentSwatch(4)"></div>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
                     </div>
                     <!-- <a class="lnr lnr-heart heart-toggle" href="#"></a> -->
                     <label class="cart-btn-container">
@@ -501,14 +581,22 @@
                         </span>
                     </span>
                 </label>
-                <img src="/res/img/elkers.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="location.href='/html/product.html';" style="cursor: pointer;">
+                <img src="/res/img/elkers.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="goProduct()" style="cursor: pointer;">
                 <div class="sofa-card-content">
-                    <h4 onclick="location.href='/html/product.html';" style="cursor: pointer;">elkers two-seater</h4>
-                    <h4 class="price" onclick="location.href='/html/product.html';" style="cursor: pointer;">$999</h4>
-                    <h5 onclick="location.href='/html/product.html';" style="cursor: pointer;">firm fabric two-seater sofa</h5>
+                    <h4 onclick="goProduct()" style="cursor: pointer;">elkers two-seater</h4>
+                    <h4 class="price" onclick="goProduct()" style="cursor: pointer;">$999</h4>
+                    <h5 onclick="goProduct()" style="cursor: pointer;">firm fabric two-seater sofa</h5>
                     <span></span>
                     <div class="color-picker">
-                        <!-- INSERT COLOR PICKER -->
+                        <!-- INSERT COLOUR PICKER -->
+                        <div class="color-swatch tawny" onclick="currentSwatch(1)"></div>
+                        <div class="color-swatch charcoal" onclick="currentSwatch(2)"></div>
+                        <div class="color-swatch chestnut" onclick="currentSwatch(3)"></div>
+                        <div class="color-swatch lapis" onclick="currentSwatch(4)"></div>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
                     </div>
                     <!-- <a class="lnr lnr-heart heart-toggle" href="#"></a> -->
                     <label class="cart-btn-container">
@@ -546,14 +634,22 @@
                         </span>
                     </span>
                 </label>
-                <img src="/res/img/costa.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="location.href='/html/product.html';" style="cursor: pointer;">
+                <img src="/res/img/costa.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="goProduct()" style="cursor: pointer;">
                 <div class="sofa-card-content">
-                    <h4 onclick="location.href='/html/product.html';" style="cursor: pointer;">costa two-seater</h4>
-                    <h4 class="price" onclick="location.href='/html/product.html';" style="cursor: pointer;">$999</h4>
-                    <h5 onclick="location.href='/html/product.html';" style="cursor: pointer;">fashioned fabric sofa</h5>
+                    <h4 onclick="goProduct()" style="cursor: pointer;">costa two-seater</h4>
+                    <h4 class="price" onclick="goProduct()" style="cursor: pointer;">$999</h4>
+                    <h5 onclick="goProduct()" style="cursor: pointer;">fashioned fabric sofa</h5>
                     <span></span>
                     <div class="color-picker">
-                        <!-- INSERT COLOR PICKER -->
+                        <!-- INSERT COLOUR PICKER -->
+                        <div class="color-swatch tawny" onclick="currentSwatch(1)"></div>
+                        <div class="color-swatch charcoal" onclick="currentSwatch(2)"></div>
+                        <div class="color-swatch chestnut" onclick="currentSwatch(3)"></div>
+                        <div class="color-swatch lapis" onclick="currentSwatch(4)"></div>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
                     </div>
                     <!-- <a class="lnr lnr-heart heart-toggle" href="#"></a> -->
                     <label class="cart-btn-container">
@@ -591,14 +687,22 @@
                         </span>
                     </span>
                 </label>
-                <img src="/res/img/durham.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="location.href='/html/product.html';" style="cursor: pointer;">
+                <img src="/res/img/durham.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="goProduct()" style="cursor: pointer;">
                 <div class="sofa-card-content">
-                    <h4 onclick="location.href='/html/product.html';" style="cursor: pointer;">durham two-seater</h4>
-                    <h4 class="price" onclick="location.href='/html/product.html';" style="cursor: pointer;">$999</h4>
-                    <h5 onclick="location.href='/html/product.html';" style="cursor: pointer;">firm fabric two-seater sofa</h5>
+                    <h4 onclick="goProduct()" style="cursor: pointer;">durham two-seater</h4>
+                    <h4 class="price" onclick="goProduct()" style="cursor: pointer;">$999</h4>
+                    <h5 onclick="goProduct()" style="cursor: pointer;">firm fabric two-seater sofa</h5>
                     <span></span>
                     <div class="color-picker">
-                        <!-- INSERT COLOR PICKER -->
+                        <!-- INSERT COLOUR PICKER -->
+                        <div class="color-swatch tawny" onclick="currentSwatch(1)"></div>
+                        <div class="color-swatch charcoal" onclick="currentSwatch(2)"></div>
+                        <div class="color-swatch chestnut" onclick="currentSwatch(3)"></div>
+                        <div class="color-swatch lapis" onclick="currentSwatch(4)"></div>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
                     </div>
                     <!-- <a class="lnr lnr-heart heart-toggle" href="#"></a> -->
                     <label class="cart-btn-container">
@@ -636,14 +740,22 @@
                         </span>
                     </span>
                 </label>
-                <img src="/res/img/mavis.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="location.href='/html/product.html';" style="cursor: pointer;">
+                <img src="/res/img/mavis.jpg" alt="image of sofa" class="img-fit sofa-card-img" onclick="goProduct()" style="cursor: pointer;">
                 <div class="sofa-card-content">
-                    <h4 onclick="location.href='/html/product.html';" style="cursor: pointer;">mavis loveseat</h4>
-                    <h4 class="price" onclick="location.href='/html/product.html';" style="cursor: pointer;">$999</h4>
-                    <h5 onclick="location.href='/html/product.html';" style="cursor: pointer;">soft fabric loveseat</h5>
+                    <h4 onclick="goProduct()" style="cursor: pointer;">mavis loveseat</h4>
+                    <h4 class="price" onclick="goProduct()" style="cursor: pointer;">$999</h4>
+                    <h5 onclick="goProduct()" style="cursor: pointer;">soft fabric loveseat</h5>
                     <span></span>
                     <div class="color-picker">
-                        <!-- INSERT COLOR PICKER -->
+                        <!-- INSERT COLOUR PICKER -->
+                        <div class="color-swatch tawny" onclick="currentSwatch(1)"></div>
+                        <div class="color-swatch charcoal" onclick="currentSwatch(2)"></div>
+                        <div class="color-swatch chestnut" onclick="currentSwatch(3)"></div>
+                        <div class="color-swatch lapis" onclick="currentSwatch(4)"></div>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
+                        <span class="underline"></span>
                     </div>
                     <!-- <a class="lnr lnr-heart heart-toggle" href="#"></a> -->
                     <label class="cart-btn-container">
@@ -661,11 +773,12 @@
             </div>
         </div>
     </div>
-    <footer>
-        <div class="footer stack centre">
-            <div class="content">
-                <a class="logo" href="/index.html">Furniture<em>Galore</em></a>
-            </div>
-        </div>
-    </footer>
+    <script src="/js/collection.js"></script>
 </body>
+<footer>
+    <div class="footer stack centre">
+        <div class="content">
+            <a class="logo" href="/index.html">Furniture<em>Galore</em></a>
+        </div>
+    </div>
+</footer>

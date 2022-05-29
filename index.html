@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/reset.css">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <!-- to import icons from linearicons from https://linearicons.com/ -->
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <title>Furniture Galore</title>
@@ -31,6 +31,7 @@
             <a class="lnr lnr-user" href="#"></a>
             <a class="lnr lnr-heart" href="#"></a>
             <a class="lnr lnr-cart" href="#"></a>
+            <a class="lnr lnr-menu" href="#"></a>
             <a class="lnr lnr-phone-handset" href="#"></a>
         </div>
     </nav>
@@ -43,25 +44,43 @@
             </div>
         </div>
         <div class="not-sidebar">
-            <img src="./res/img/hero-img.jpg" alt="image of sofa and coffee table" class="hero-img img-fit">
+            <!-- <img src="./res/img/hero-img.jpg" alt="image of sofa and coffee table" class="hero-img img-fit"> -->
+            <div class="slideshow-container">
+                <div class="slide-container fade">
+                    <img src="/res/img/hero-img.jpg" alt="image of sofa" class="hero-img img-fit">
+                </div>
+                <div class="slide-container fade">
+                    <img src="/res/img/cancun.jpg" alt="image of sofa" class="hero-img img-fit">
+                </div>
+                <div class="slide-container fade">
+                    <img src="/res/img/olaf.jpg" alt="image of sofa" class="hero-img img-fit">
+                </div>
+                <span class="arrow left lnr lnr-chevron-left" onclick="moveSlide(-1)"></span>
+                <span class="arrow right lnr lnr-chevron-right" onclick="moveSlide(1)"></span>
+            </div>
+            <div class="slideshow-dashes cluster">
+                <span class="dash" onclick="currentSlide(1)"></span>
+                <span class="dash" onclick="currentSlide(2)"></span>
+                <span class="dash" onclick="currentSlide(3)"></span>
+            </div>
         </div>
     </div>
     <div class="main-collection padding">
         <h2>Our Collections</h2>
         <div class="main-collection-img-container cluster">
-            <div class="main-collection-img stack" onclick="location.href='./html/collection.html';" style="cursor: pointer;">
+            <div class="main-collection-img stack" onclick="goCollection()">
                 <img src="./res/img/khloe.jpg" alt="image of sofa" class="img-fit collection-preview">
-                <h3 class="main-collection-txt">Lounge</h3>
+                <h3 class="main-collection-txt" onclick="goCollection()">Lounge</h3>
             </div>
             
-            <div class="main-collection-img stack" onclick="location.href='#';" style="cursor: pointer;">
+            <div class="main-collection-img stack" onclick="goCollection()">
                 <img src="./res/img/bedroom.jpg" alt="image of sofa" class="img-fit collection-preview">
-                <h3 class="main-collection-txt">Bedroom</h3>
+                <h3 class="main-collection-txt" onclick="goCollection()">Bedroom</h3>
             </div>
 
-            <div class="main-collection-img stack" onclick="location.href='#';" style="cursor: pointer;">
+            <div class="main-collection-img stack" onclick="goCollection()">
                 <img src="./res/img/dining.jpg" alt="image of sofa" class="img-fit collection-preview">
-                <h3 class="main-collection-txt">Dining</h3>
+                <h3 class="main-collection-txt" onclick="goCollection()">Dining</h3>
             </div>
         </div>
     </div>
@@ -77,8 +96,8 @@
                         </span>
                     </span>
                 </label>
-                <img src="./res/img/st-mortiz-three-seater.jpg" alt="image of sofa" class="img-fit deals-preview" onclick="location.href='/html/product.html';" style="cursor: pointer;">
-                <div class="main-deals-txt" onclick="location.href='/html/product.html';" style="cursor: pointer;">
+                <img src="./res/img/st-mortiz-three-seater.jpg" alt="image of sofa" class="img-fit deals-preview" onclick="goProduct()">
+                <div class="main-deals-txt" onclick="goProduct()">
                     <h3 class="large-card-title">St Mortiz Three-Seater</h3>
                     <h3 class="price">$999</h3>
                     <h4>full grain leather, three-seater sofa</h4>
@@ -94,15 +113,15 @@
                         </span>
                     </span>
                 </label>
-                <img src="./res/img/marbella-longboy.jpg" alt="image of sofa" class="img-fit deals-preview" onclick="location.href='/html/product.html';" style="cursor: pointer;">
-                <div class="main-deals-txt" onclick="location.href='/html/product.html';" style="cursor: pointer;">
+                <img src="./res/img/marbella-longboy.jpg" alt="image of sofa" class="img-fit deals-preview" onclick="goProduct()">
+                <div class="main-deals-txt" onclick="goProduct()">
                     <h3 class="large-card-title">Marbella Longboy</h3>
                     <h3 class="price">$999</h3>
                     <h4>suede three-seater sofa</h4>
                 </div>
             </div>
             <!-- TEMP SCROLL last-card -->
-            <div class="main-deals-card last-card">
+            <div class="main-deals-card">
                 <label class="heart-btn-container">
                     <span class="switch">
                         <input type="checkbox">
@@ -111,8 +130,8 @@
                         </span>
                     </span>
                 </label>
-                <img src="./res/img/st-mortiz-sideboard.jpg" alt="image of sofa" class="img-fit deals-preview" onclick="location.href='/html/product.html';" style="cursor: pointer;">
-                <div class="main-deals-txt" onclick="location.href='/html/product.html';" style="cursor: pointer;">
+                <img src="./res/img/st-mortiz-sideboard.jpg" alt="image of sofa" class="img-fit deals-preview" onclick="goProduct()">
+                <div class="main-deals-txt" onclick="goProduct()">
                     <h3 class="large-card-title">St Mortiz Sideboard</h3>
                     <h3 class="price">$999</h3>
                     <h4>pine sideboard with inset handles</h4>
@@ -120,6 +139,7 @@
             </div>
         </div>
     </div>
+    <script src="/js/scripts.js"></script>
 </body>
 <footer>
     <div class="footer stack centre">
