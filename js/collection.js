@@ -35,7 +35,32 @@ function showSwatches(nextSwatchNumber) {
   for (i = 0; i < underlines.length; i++) {
     underlines[i].className = underlines[i].className.replace(" active", "");
   }
+
   swatches[swatchIndex-1].className += " active";  
   underlines[swatchIndex-1].className += " active";
 }
 
+let colorSwatch = document.getElementsByClassName("color-swatch");
+
+
+document.querySelectorAll(".color-swatch").forEach(item => {
+  // let colorName = item.innerHTML;
+  // console.log(colorName);
+  let productColor = document.querySelector(".product-color-name")
+
+  item.addEventListener("click", event => {
+    console.log("clicked!");
+    if (item.classList.contains("tawny")) {
+      productColor.innerHTML = "tawny"
+    }
+    else if (item.classList.contains("charcoal")) {
+      productColor.innerHTML = "charcoal"
+    }
+    else if (item.classList.contains("chestnut")) {
+      productColor.innerHTML = "chestnut"
+    }
+    else if (item.classList.contains("lapis")) {
+      productColor.innerHTML = "lapis"
+    }
+  });
+});
