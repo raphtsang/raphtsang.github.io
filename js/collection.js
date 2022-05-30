@@ -2,16 +2,30 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
   });
   
-  function goCollection(){
-      location.href='/html/collection.html'; 
-      // object.style.cursor = pointer; 
-  }
-  
-  function goProduct(){
-      location.href='/html/product.html'; 
-      // object.style.cursor = pointer; 
-  }
-  
+function goCollection(){
+    location.href='/html/collection.html'; 
+}
+
+document.querySelectorAll(".main-collection-img, .main-collection-txt, .main-collection-title, .hero-title").forEach(item => {
+  item.style.cursor = "pointer";
+  item.addEventListener("click", event => {
+    console.log("clicked!");
+    goCollection();
+  });
+});
+
+function goProduct(){
+    location.href='/html/product.html'; 
+}
+
+document.querySelectorAll(".large-card-title, .price, .large-card-desc, .featured-product-img, .sofa-card-img, .sofa-card-content > h4, .sofa-card-content > h5").forEach(item => {
+  item.style.cursor = "pointer";
+  item.addEventListener("click", event => {
+    console.log("clicked!");
+    goProduct();
+  });
+});
+
 let swatchIndex = 1;
 showSwatches(swatchIndex);
 

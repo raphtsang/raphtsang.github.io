@@ -4,13 +4,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 function goCollection(){
     location.href='/html/collection.html'; 
-    // object.style.cursor = pointer; 
 }
+
+document.querySelectorAll(".main-collection-img, .main-collection-txt, .main-collection-title, .hero-title").forEach(item => {
+  item.style.cursor = "pointer";
+  item.addEventListener("click", event => {
+    console.log("clicked!");
+    goCollection();
+  });
+});
 
 function goProduct(){
     location.href='/html/product.html'; 
-    // object.style.cursor = pointer; 
 }
+
+document.querySelectorAll(".deals-preview, .main-deals-txt, .main-deals-title").forEach(item => {
+  item.style.cursor = "pointer";
+  item.addEventListener("click", event => {
+    console.log("clicked!");
+    goProduct();
+  });
+});
 
 // let slideIndex = 0;
 // let slideList;
@@ -112,3 +126,4 @@ function showSlides(nextSlideNumber) {
 
 //   });
 // }
+
