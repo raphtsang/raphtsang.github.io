@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- to import icons from linearicons from https://linearicons.com/ -->
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <title>Checkout | Furniture Galore</title>
+</head>
+<body>
+    <nav class="cluster">
+        <div class="nav-logo--menu cluster">
+            <a class="lnr lnr-menu" href="#"></a>
+            <a class="logo" href="/index.html">Furniture<em>Galore</em></a>
+        </div>
+        <div class="nav-items">
+            <ul class="cluster">
+                <li><a class="menu-btn" href="/html/collection.html">New</a></li>
+                <li><a class="menu-btn" href="/html/collection.html">Lounge</a></li>
+                <li><a class="menu-btn" href="/html/collection.html">Dining</a></li>
+                <li><a class="menu-btn" href="/html/collection.html">Bedroom</a></li>
+                <li><a class="menu-btn" href="/html/collection.html">Outdoor</a></li>
+                <li><a class="menu-btn" href="/html/rooms.html">Rooms</a></li>
+            </ul>
+        </div>
+        <div class="nav-icons">
+            <a class="lnr lnr-magnifier" href="#"></a>
+            <a class="lnr lnr-user" href="#"></a>
+            <a class="lnr lnr-heart" href="#"></a>
+            <a class="lnr lnr-cart" href="/html/cart.html"></a>
+            <a class="lnr lnr-menu" href="#"></a>
+            <a class="lnr lnr-phone-handset" href="#"></a>
+        </div>
+    </nav>
+    <div class="site-path">
+        <a href="/index.html">home</a>
+        <p> > </p>
+        <a href="/html/cart.html">cart</a>
+        <p> > </p>
+        <a href="/html/checkout.html">checkout</a>
+    </div>
+    <main class="checkout padding">
+        <!-- <h1 class="checkout-title">checkout</h1> -->
+        <div class="cart-container sidebar-container">
+            <div class="cart-card-container sidebar">
+                <form action="#" class="customer-info">
+                    <h2 class="title">customer info</h2>
+                    <h4 class="first-name">first name<em>*</em></h4>
+                    <input type="text" name="first-name" id="first-name" placeholder="john" required/>
+                    <h4 class="last-name">last name<em>*</em></h4>
+                    <input type="text" name="last-name" id="last-name" placeholder="appleseed" required/>
+                    <h4 class="email">email address<em>*</em></h4>
+                    <input type="email" name="email" id="email" placeholder="johnappleseed@gmail.com" required/>
+                    <!-- <input type="submit" name="submit" value="Submit" id="submit"/> -->
+                </form>
+                <form action="#" class="shipping-info collapsed">
+                    <h2 class="title">shipping info</h2>
+                    <h4 class="phone-number">phone number<em>*</em></h4>
+                    <input type="tel" name="phone-number" id="phone-number" min="6" placeholder="0401 234 567" required/>
+                    <h4 class="street-address">street address<em>*</em></h4>
+                    <input type="text" name="street-address" id="street-address" placeholder="house/unit number, street name" required/>
+                </form>
+                <form action="#" class="card-info collapsed">
+                    <h2 class="title">card info</h2>
+                    <h4 class="cardholder-name">cardholder name<em>*</em></h4>
+                    <input type="text" name="cardholder-name" id="cardholder-name" placeholder="john appleseed" required/>
+                    <h4 class="card-number">card number<em>*</em></h4>
+                    <input type="number" name="card-number" id="card-number" placeholder="card number" required/>
+                    <h4 class="valid-thru">valid thru<em>*</em></h4>
+                    <h4 class="cvc">cvc<em>*</em></h4>
+                    <h4 class="billing-address">billing address<em>*</em></h4>
+                    <input type="number" name="month" id="month" min="01" max="12" placeholder="mm" required/>
+                    <h5>/</h5>
+                    <input type="number" name="year" id="year" min="22" max="99" maxlength="2" placeholder="yy" required/>
+                    <input type="number" name="cvc" id="cvc" maxlength="3" minlength="3" placeholder="cvc" required/>
+                    <span class="lnr lnr-question-circle"></span>
+                    <div class="billing">
+                        <div class="same-shipping">
+                            <input type="radio" name="billing-address" id="same-shipping" checked>
+                            <span class="square-check"></span>
+                            <label class="same-shipping" for="same-shipping">same as shipping address</label>
+                        </div>
+                        <div class="diff-shipping">
+                            <input type="radio" name="billing-address" id="diff-shipping">
+                            <span class="square-check"></span>
+                            <label class="diff-shipping" for="diff-shipping">use a different address</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="cart-summary-container not-sidebar order">
+                <h3 class="cart-summary-title order">order summary</h3>
+                <a href="/html/cart.html" class="back-link order">edit order</a>
+                <h5>subtotal before delivery</h5>
+                <h5 class="price">$1,998</h5>
+                <h5>subtotal before gst</h5>
+                <h5 class="price">$1,816.36</h5>
+                <h5>shipping</h5>
+                <h5 class="price">$0</h5>
+                <h5>gst</h5>
+                <h5 class="price">$181.63</h5>
+                <span class="spacer"></span>
+                <h4 class="subtotal">total</h4>
+                <h3 class="cart-summary-price price">$1,998</h3>
+                <h5>your savings</h5>
+                <h5 class="price">$300</h5>
+                <a class="product-btn btn-secondary checkout-btn" href="#">NEXT STEP</a>
+            </div>
+        </div>
+    </main>
+    <script src="/js/checkout.js"></script>
+    <script src="/js/product.js"></script>
+</body>
+</html>

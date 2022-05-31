@@ -1,12 +1,19 @@
-function goCollection(){
-  location.href='/html/collection.html'; 
-  // object.style.cursor = pointer; 
+document.addEventListener('DOMContentLoaded', (event) => {
+  console.log('DOM fully loaded and parsed');
+});
+
+function goRooms(){
+  location.href='/html/rooms.html'; 
 }
 
-function goProduct(){
-  location.href='/html/product.html'; 
-  // object.style.cursor = pointer; 
-}
+document.querySelectorAll(".product-rooms-img, .product-rooms-title").forEach(item => {
+  item.style.cursor = "pointer";
+  item.addEventListener("click", event => {
+    console.log("clicked!");
+    goRooms();
+  });
+});
+
 
 let slideIndex = 1;
 showSlides(slideIndex);
