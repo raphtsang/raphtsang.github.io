@@ -46,38 +46,54 @@
         <!-- <h1 class="checkout-title">checkout</h1> -->
         <div class="cart-container sidebar-container">
             <div class="cart-card-container sidebar">
-                <form action="#" class="customer-info">
+                <form action="#" class="customer-info" name="customer-info">
                     <h2 class="title">customer info</h2>
                     <h4 class="first-name">first name<em>*</em></h4>
-                    <input type="text" name="first-name" id="first-name" placeholder="john" required/>
+                    <input type="text" name="first-name" id="first-name" placeholder="john">
                     <h4 class="last-name">last name<em>*</em></h4>
-                    <input type="text" name="last-name" id="last-name" placeholder="appleseed" required/>
+                    <input type="text" name="last-name" id="last-name" placeholder="appleseed">
                     <h4 class="email">email address<em>*</em></h4>
-                    <input type="email" name="email" id="email" placeholder="johnappleseed@gmail.com" required/>
-                    <!-- <input type="submit" name="submit" value="Submit" id="submit"/> -->
+                    <input type="email" name="email" id="email" placeholder="johnappleseed@gmail.com">
+                    <input type="submit" name="submit" value="Submit" id="submit" hidden/>
                 </form>
-                <form action="#" class="shipping-info collapsed">
+                <form action="#" class="shipping-info collapsed" name="shipping-info">
                     <h2 class="title">shipping info</h2>
                     <h4 class="phone-number">phone number<em>*</em></h4>
-                    <input type="tel" name="phone-number" id="phone-number" min="6" placeholder="0401 234 567" required/>
+                    <input type="tel" name="phone-number" id="phone-number" min="6" placeholder="0401 234 567">
                     <h4 class="street-address">street address<em>*</em></h4>
-                    <input type="text" name="street-address" id="street-address" placeholder="house/unit number, street name" required/>
+                    <input type="text" name="street-address" id="street-address" placeholder="house/unit number, street name">
+                    <h4 class="suburb">suburb<em>*</em></h4>
+                    <h4 class="postcode">postcode<em>*</em></h4>
+                    <h4 class="state">state<em>*</em></h4>
+                    <input type="text" name="suburb" id="suburb" placeholder="suburb">
+                    <input type="number" name="postcode" id="postcode" minlength="4" maxlength="4" placeholder="postcode">
+                    <select name="state" id="state">
+                        <option value="" disabled selected>state</option>
+                        <option value="NSW">New South Wales</option>
+                        <option value="QLD">Queensland</option>
+                        <option value="SA">South Australia</option>
+                        <option value="TAS">Tasmania</option>
+                        <option value="VIC">Victoria</option>
+                        <option value="WA">Western Australia</option>
+                    </select>
+                    <h4 class="login-prompt">have an account? <br>login instead</h4>
+                    <input type="submit" name="submit" value="Submit" id="submit" hidden/>
                 </form>
-                <form action="#" class="card-info collapsed">
+                <form action="#" class="card-info collapsed" name="card-info">
                     <h2 class="title">card info</h2>
                     <h4 class="cardholder-name">cardholder name<em>*</em></h4>
-                    <input type="text" name="cardholder-name" id="cardholder-name" placeholder="john appleseed" required/>
+                    <input type="text" name="cardholder-name" id="cardholder-name" placeholder="john appleseed">
                     <h4 class="card-number">card number<em>*</em></h4>
-                    <input type="number" name="card-number" id="card-number" placeholder="card number" required/>
+                    <input type="number" name="card-number" id="card-number" placeholder="card number">
                     <h4 class="valid-thru">valid thru<em>*</em></h4>
                     <h4 class="cvc">cvc<em>*</em></h4>
                     <h4 class="billing-address">billing address<em>*</em></h4>
-                    <input type="number" name="month" id="month" min="01" max="12" placeholder="mm" required/>
+                    <input type="number" name="month" id="month" min="01" max="12" placeholder="mm">
                     <h5>/</h5>
-                    <input type="number" name="year" id="year" min="22" max="99" maxlength="2" placeholder="yy" required/>
-                    <input type="number" name="cvc" id="cvc" maxlength="3" minlength="3" placeholder="cvc" required/>
+                    <input type="number" name="year" id="year" min="22" max="99" maxlength="2" placeholder="yy">
+                    <input type="number" name="cvc" id="cvc" maxlength="3" minlength="3" placeholder="cvc">
                     <span class="lnr lnr-question-circle"></span>
-                    <div class="billing">
+                    <fieldset class="billing">
                         <div class="same-shipping">
                             <input type="radio" name="billing-address" id="same-shipping" checked>
                             <span class="square-check"></span>
@@ -88,7 +104,8 @@
                             <span class="square-check"></span>
                             <label class="diff-shipping" for="diff-shipping">use a different address</label>
                         </div>
-                    </div>
+                    </fieldset>
+                    <input type="submit" name="submit" value="Submit" id="submit" hidden/>
                 </form>
             </div>
             <div class="cart-summary-container not-sidebar order">
@@ -107,6 +124,8 @@
                 <h3 class="cart-summary-price price">$1,998</h3>
                 <h5>your savings</h5>
                 <h5 class="price">$300</h5>
+                <p><img src="/res/svg/clock.svg" alt="" class="svg svg-clock"> your order should arrive in 5-20 days 
+                    <br> <img src="/res/svg/box.svg" alt="" class="svg svg-box"> our shipping policy</p>
                 <a class="product-btn btn-secondary checkout-btn" href="#">NEXT STEP</a>
             </div>
         </div>

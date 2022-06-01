@@ -127,3 +127,8 @@ function showSlides(nextSlideNumber) {
 //   });
 // }
 
+
+// submenu.addEventListener("mouseout", event => {
+//   var submenu = document.querySelector(".nav-submenu");  
+//   submenu.classList.toggle("show-sub");
+// })
