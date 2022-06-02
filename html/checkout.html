@@ -19,7 +19,14 @@
         <div class="nav-items">
             <ul class="cluster">
                 <li><a class="menu-btn" href="/html/collection.html">New</a></li>
-                <li><a class="menu-btn" href="/html/collection.html">Lounge</a></li>
+                <li><a class="menu-btn dropdown"  href="/html/collection.html">Lounge<span class="lnr lnr-chevron-down"></span></a>
+                    <ul class="nav-submenu">
+                        <li><a class="menu-btn" href="/html/collection.html">Sofas</a></li>
+                        <li><a class="menu-btn" href="/html/collection.html">Armchairs</a></li>
+                        <li><a class="menu-btn" href="/html/collection.html">Recliners</a></li>
+                        <li><a class="menu-btn" href="/html/collection.html">Accent Chairs</a></li>
+                        <li><a class="menu-btn" href="/html/collection.html">Ottomans</a></li>
+                    </ul></li>
                 <li><a class="menu-btn" href="/html/collection.html">Dining</a></li>
                 <li><a class="menu-btn" href="/html/collection.html">Bedroom</a></li>
                 <li><a class="menu-btn" href="/html/collection.html">Outdoor</a></li>
@@ -27,7 +34,12 @@
             </ul>
         </div>
         <div class="nav-icons">
-            <a class="lnr lnr-magnifier" href="#"></a>
+            <form action="/html/collection.html">
+                <a class="lnr lnr-magnifier" href="#">
+                    <input type="text" name="searchbar" id="searchbar">
+                    <input type="submit" hidden/>
+                </a>
+            </form>
             <a class="lnr lnr-user" href="#"></a>
             <a class="lnr lnr-heart" href="#"></a>
             <a class="lnr lnr-cart" href="/html/cart.html"></a>
@@ -46,7 +58,7 @@
         <!-- <h1 class="checkout-title">checkout</h1> -->
         <div class="cart-container sidebar-container">
             <div class="cart-card-container sidebar">
-                <form action="#" class="customer-info" name="customer-info">
+                <form action="#" class="customer-info" name="customer-info" id="customer-info">
                     <h2 class="title">customer info</h2>
                     <h4 class="first-name">first name<em>*</em></h4>
                     <input type="text" name="first-name" id="first-name" placeholder="john">
@@ -54,9 +66,9 @@
                     <input type="text" name="last-name" id="last-name" placeholder="appleseed">
                     <h4 class="email">email address<em>*</em></h4>
                     <input type="email" name="email" id="email" placeholder="johnappleseed@gmail.com">
-                    <input type="submit" name="submit" value="Submit" id="submit" hidden/>
+                    <input type="submit" name="btnsubmit" value="Submit" id="submit" hidden/>
                 </form>
-                <form action="#" class="shipping-info collapsed" name="shipping-info">
+                <form action="#" class="shipping-info collapsed" name="shipping-info" id="shipping-info">
                     <h2 class="title">shipping info</h2>
                     <h4 class="phone-number">phone number<em>*</em></h4>
                     <input type="tel" name="phone-number" id="phone-number" min="6" placeholder="0401 234 567">
@@ -77,9 +89,9 @@
                         <option value="WA">Western Australia</option>
                     </select>
                     <h4 class="login-prompt">have an account? <br>login instead</h4>
-                    <input type="submit" name="submit" value="Submit" id="submit" hidden/>
+                    <input type="submit" name="btnsubmit" value="Submit" id="submit" hidden/>
                 </form>
-                <form action="#" class="card-info collapsed" name="card-info">
+                <form action="#" class="card-info collapsed" name="card-info" id="card-info">
                     <h2 class="title">card info</h2>
                     <h4 class="cardholder-name">cardholder name<em>*</em></h4>
                     <input type="text" name="cardholder-name" id="cardholder-name" placeholder="john appleseed">
@@ -105,7 +117,7 @@
                             <label class="diff-shipping" for="diff-shipping">use a different address</label>
                         </div>
                     </fieldset>
-                    <input type="submit" name="submit" value="Submit" id="submit" hidden/>
+                    <input type="submit" name="btnsubmit" value="Submit" id="submit" hidden/>
                 </form>
             </div>
             <div class="cart-summary-container not-sidebar order">

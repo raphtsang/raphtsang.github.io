@@ -19,7 +19,14 @@
         <div class="nav-items">
             <ul class="cluster">
                 <li><a class="menu-btn" href="/html/collection.html">New</a></li>
-                <li><a class="menu-btn" href="/html/collection.html">Lounge</a></li>
+                <li><a class="menu-btn dropdown"  href="/html/collection.html">Lounge<span class="lnr lnr-chevron-down"></span></a>
+                    <ul class="nav-submenu">
+                        <li><a class="menu-btn" href="/html/collection.html">Sofas</a></li>
+                        <li><a class="menu-btn" href="/html/collection.html">Armchairs</a></li>
+                        <li><a class="menu-btn" href="/html/collection.html">Recliners</a></li>
+                        <li><a class="menu-btn" href="/html/collection.html">Accent Chairs</a></li>
+                        <li><a class="menu-btn" href="/html/collection.html">Ottomans</a></li>
+                    </ul></li>
                 <li><a class="menu-btn" href="/html/collection.html">Dining</a></li>
                 <li><a class="menu-btn" href="/html/collection.html">Bedroom</a></li>
                 <li><a class="menu-btn" href="/html/collection.html">Outdoor</a></li>
@@ -27,7 +34,12 @@
             </ul>
         </div>
         <div class="nav-icons">
-            <a class="lnr lnr-magnifier" href="#"></a>
+            <form action="/html/collection.html">
+                <a class="lnr lnr-magnifier" href="#">
+                    <input type="text" name="searchbar" id="searchbar">
+                    <input type="submit" hidden/>
+                </a>
+            </form>
             <a class="lnr lnr-user" href="#"></a>
             <a class="lnr lnr-heart" href="#"></a>
             <a class="lnr lnr-cart" href="/html/cart.html"></a>

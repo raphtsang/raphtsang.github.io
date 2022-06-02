@@ -82,7 +82,8 @@ const plusIncrement = () => {
     // console.log("clicked!");
     console.log(timesClicked)
     if (timesClicked == 1) {
-        validateCustomerForm();
+        // validateCustomerForm();
+        document.getElementById("customer-info").submit.click();
         // shippingFocus(shippingInfo);
         checkoutBtn.setAttribute("href", "#");
         if (checkoutBtn.classList.contains("pay-now")) {
@@ -91,10 +92,10 @@ const plusIncrement = () => {
         }
     }
     if (timesClicked == 2) {
-        validateShippingForm();
+        document.getElementById("shipping-info").submit.click();
     }
     if (timesClicked == 3) {
-        validateCardForm();
+        document.getElementById("card-info").submit.click();
         // checkoutBtn.classList.toggle("pay-now");
         checkoutBtn.className = checkoutBtn.className += " pay-now";
         checkoutBtn.innerHTML = "PAY $1,998";
