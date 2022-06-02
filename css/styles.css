@@ -2122,6 +2122,28 @@ footer a.logo em {
         flex-direction: column;
     }
      */
+
+    .popup {
+        left: auto;
+        right: 0;
+        transform: translateX(500px);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
+        box-shadow: -2px 0px 4px 0px #00000025;
+        padding: 4.236em;
+        max-width: calc(100vw*0.5);
+        font-size: 1.618em;
+    }
+
+    .popup .lnr-cross {
+        text-align: right;
+        position: relative;
+        bottom: 0.7em;
+        left: 1em;
+    }
+
     .hero-cta.sidebar {
         flex-basis: 0;
     }

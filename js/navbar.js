@@ -36,19 +36,51 @@ dropdown.addEventListener("mouseover", event => {
 let popup = document.querySelector(".popup")
 let sideDropdown = document.querySelector(".menu-btn.side-dropdown");
 let chevronDown = sideDropdown.firstElementChild;
-let hamburgerIcon = document.querySelector(".lnr-menu")
-let crossIcon = document.querySelector(".lnr-cross")
-let overlay = document.getElementById("overlay")
+let hamburgerIcon = document.getElementsByClassName("lnr-menu");
+let i;
+let crossIcon = document.querySelector(".lnr-cross");
+let overlay = document.getElementById("overlay");
 
-function openPopup() {
-  popup.style.transform = "translateX(0px)";
-  on();
+
+function mediaQuery(maxWidth) {
+  if (maxWidth.matches) { 
+    function openPopup() {
+      popup.style.transform = "translateX(0px)";
+      on();
+    }
+    
+    function closePopup(){
+      popup.style.transform = "translateX(500px)";
+      off();
+    }
+    
+  } else {
+    function openPopup() {
+      popup.style.transform = "translateX(0px)";
+      on();
+    }
+    
+    function closePopup(){
+      popup.style.transform = "translateX(-500px)";
+      off();
+    }
+    
+  }
+  for (i = 0; i < hamburgerIcon.length; i++) {
+    hamburgerIcon[i].addEventListener("click", openPopup);
+  }
+  
+  crossIcon.addEventListener("click", closePopup)
+  
+  overlay.addEventListener("click", closePopup)
+  
 }
 
-function closePopup(){
-  popup.style.transform = "translateX(-500px)";
-  off();
-}
+let maxWidth = window.matchMedia("(max-width: 700px)");
+mediaQuery(maxWidth);
+maxWidth.addEventListener("change", mediaQuery);
+
+
 
 
 sideDropdown.addEventListener("click", event => {
@@ -60,9 +92,12 @@ sideDropdown.addEventListener("click", event => {
   } else {
     dropdownContent.style.maxHeight = dropdownContent.scrollHeight + "px";
   }
-  }); 
+}); 
 
-hamburgerIcon.addEventListener("click", openPopup)
+
+for (i = 0; i < hamburgerIcon.length; i++) {
+  hamburgerIcon[i].addEventListener("click", openPopup);
+}
 
 crossIcon.addEventListener("click", closePopup)
 
