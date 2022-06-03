@@ -954,7 +954,8 @@ input[type="checkbox"]:checked + .lnr-cart{
     align-items: center;
     justify-content: right;
     position: relative;
-    top: 0em;
+    top: auto;
+    bottom: auto;
     right: 0.8em;
 }
 
@@ -1270,6 +1271,16 @@ input[type="checkbox"]:checked + .lnr-cart{
 
 .rooms {
     padding-top: 0;
+    justify-content: center;
+}
+
+.rooms-title {
+    width: 100%;
+    text-align: start;
+}
+
+.rooms-img-container {
+    gap: 1.618em;
 }
 
 .rooms-img-container ul {
@@ -1289,6 +1300,15 @@ input[type="checkbox"]:checked + .lnr-cart{
     object-fit: cover;
     vertical-align: bottom;
     border-radius: 8px;
+}
+
+.load-more {
+    text-decoration: underline;
+    background-color: #00000000;
+    font-family: "Inter", sans-serif;
+    font-size: 2em;
+    border: none;
+    cursor: pointer;
 }
 
 /* END OF ROOMS */
@@ -2130,6 +2150,10 @@ footer a.logo em {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+
+    .rooms-img-container li {
+        height: 16vh;
     }
 
     .cart {

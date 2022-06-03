@@ -1,23 +1,30 @@
-const totalCount = document.querySelector(".quantity");
+const totalCount = document.querySelectorAll(".quantity");
 
-let count = 1;
 
-totalCount.innerHTML = count;
+totalCount.forEach(item => {
+  let count = 1;
+  item.innerHTML = count;
+  const plusIncrement = () => {
+    count++;
+    item.innerHTML = count;
+  };
+  
+  const minusIncrement = () => {
+    count--;
+    if (count < 0)
+    count++;
+    item.innerHTML = count;
+  };
+  
+  const incrementCount = document.querySelectorAll(".plus.increment");
+  const decrementCount = document.querySelectorAll(".minus.increment");
 
-const plusIncrement = () => {
-  count++;
-  totalCount.innerHTML = count;
-};
+  incrementCount.forEach(item => {
+    item.addEventListener("click", plusIncrement)
+  });
+  decrementCount.forEach(item => {
+    item.addEventListener("click", minusIncrement)
+  })
 
-const minusIncrement = () => {
-  count--;
-  if (count < 0)
-  count++;
-  totalCount.innerHTML = count;
-};
+});
 
-const incrementCount = document.querySelector(".plus.increment");
-const decrementCount = document.querySelector(".minus.increment");
-
-incrementCount.addEventListener("click", plusIncrement);
-decrementCount.addEventListener("click", minusIncrement); 

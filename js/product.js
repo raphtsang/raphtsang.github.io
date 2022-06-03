@@ -44,7 +44,7 @@ function showSlides(nextSlideNumber) {
 }
 
 var expand = document.getElementsByClassName("expand");
-var i;
+// var i;
 
 for (i = 0; i < expand.length; i++) {
   expand[i].addEventListener("click", function() {
@@ -79,6 +79,3 @@ mediaQuery845(maxWidth845);
 maxWidth845.addEventListener("change", mediaQuery845);
 
 
-let addToCartBtn = document.querySelector(".product-btns-container .product-btn.btn-secondary")
-
-addToCartBtn.addEventListener

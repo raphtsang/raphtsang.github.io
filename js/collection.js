@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
-  });
-  
+  console.log('DOM fully loaded and parsed');
+});
+
 function goCollection(){
     location.href='/html/collection.html'; 
 }
@@ -81,3 +81,5 @@ document.querySelectorAll(".color-swatch").forEach(item => {
     }
   });
 });
+
+

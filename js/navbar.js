@@ -12,27 +12,6 @@ dropdown.addEventListener("mouseover", event => {
   }
 );
 
-// function searchExpand(){
-  
-// }
-
-// searchIcon.addEventListener("click", )
-
-// var sideDropdown = document.getElementsByClassName("side-dropdown");
-// var i;
-
-// for (i = 0; i < sideDropdown.length; i++) {
-//   sideDropdown[i].addEventListener("click", function() {
-//     this.classList.toggle("active");
-//     console.log("hilaosdiaw")
-//     var dropdownContent = this.nextElementSibling;
-//     if (dropdownContent.style.display === "block") {
-//       dropdownContent.style.display = "none";
-//     } else {
-//       dropdownContent.style.display = "block";
-//     }
-//   });
-// }
 let popup = document.querySelector(".popup")
 let cartPopup = document.querySelector(".popup.side-cart")
 let sideDropdown = document.querySelector(".menu-btn.side-dropdown");
@@ -40,11 +19,18 @@ let chevronDown = sideDropdown.firstElementChild;
 let hamburgerIcon = document.getElementsByClassName("lnr-menu");
 let cartIcon = document.querySelector(".lnr-cart")
 let i;
-// let crossIcon = document.querySelector(".lnr-cross");
 let crossIcon = document.getElementsByClassName("lnr-cross")
 let overlay = document.getElementById("overlay");
 let goToCartBtn = document.querySelector(".product-btn.btn-secondary")
+let addToCartBtn = document.querySelector(".product-btns-container .product-btn.btn-secondary")
 
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
 
 function mediaQuery(maxWidth) {
   if (maxWidth.matches) { 
@@ -95,10 +81,20 @@ function mediaQuery(maxWidth) {
     crossIcon[i].addEventListener("click", closeCartPopup);
   }
 
-  cartIcon.addEventListener("click", openCartPopup);
+  // cartIcon.addEventListener("click", openCartPopup);
 
-  overlay.addEventListener("click", closePopup)
-  overlay.addEventListener("click", closeCartPopup)
+  overlay.addEventListener("click", closePopup);
+  overlay.addEventListener("click", closeCartPopup);
+
+  let sofaCardCartBtn = document.querySelectorAll(".lnr-cart")
+
+  sofaCardCartBtn.forEach(item => {
+  item.addEventListener("click", event => {
+    openCartPopup();
+  });
+});
+
+  addToCartBtn.addEventListener("click", openCartPopup);
   
 }
 
@@ -126,6 +122,7 @@ sideDropdown.addEventListener("click", event => {
 }); 
 
 
+
 // for (i = 0; i < hamburgerIcon.length; i++) {
 //   hamburgerIcon[i].addEventListener("click", openPopup);
 // }
@@ -133,4 +130,18 @@ sideDropdown.addEventListener("click", event => {
 // crossIcon.addEventListener("click", closePopup)
 
 // overlay.addEventListener("click", closePopup)
+
+// ROOMS LOAD MORE
+const roomsImgSet = document.querySelector(".rooms-img-set");
+const clone = roomsImgSet.cloneNode(true);
+const loadMoreBtn = document.querySelector(".load-more")
+
+function loadMore() {
+  document.querySelector(".rooms-img-container").appendChild(clone)
+  loadMoreBtn.innerHTML = "you've reached the end :("
+  loadMoreBtn.style.textDecoration = "none"
+  loadMoreBtn.style.cursor = "auto"
+}
+
+loadMoreBtn.addEventListener("click", loadMore)
 
