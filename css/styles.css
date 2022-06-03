@@ -1185,6 +1185,7 @@ input[type="checkbox"]:checked + .lnr-cart{
     border-width: 2px;
     border-radius: 4px;
     border-color: var(--color-black);
+    color: var(--color-black);
     height: 100%;
     width: 25px;
     position: absolute;
@@ -1505,6 +1506,7 @@ input[type="text"]:focus::placeholder{
     background-color: transparent;
     padding: 0.5em;
     font-family: "Inter", sans-serif;
+    color: var(--color-black);
     width: 35%;
     justify-content: flex-end;
     box-shadow: 0px 0px 0px 2px var(--color-black);
@@ -1631,6 +1633,10 @@ input[type="email"]:focus::placeholder{
 
 .shipping-info :nth-child(-n+5) {
     grid-column: 1/5;
+}
+
+.shipping-info #suburb, .shipping-info #postcode {
+    min-width: 2.618em;
 }
 
 .shipping-info h4.state {
