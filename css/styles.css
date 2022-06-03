@@ -2101,11 +2101,17 @@ footer a.logo em {
 @media screen and (max-width: 845px) {
     .cart-container {
         flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .cart-card-container.sidebar {
+        flex-basis: initial;
     }
 
     .cart-summary-container.not-sidebar {
         max-width: none;
         grid-template-rows: auto;
+        flex-basis: initial;
     }
 
     .cart-end {
