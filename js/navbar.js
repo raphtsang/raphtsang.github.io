@@ -34,11 +34,14 @@ dropdown.addEventListener("mouseover", event => {
 //   });
 // }
 let popup = document.querySelector(".popup")
+let cartPopup = document.querySelector(".popup.side-cart")
 let sideDropdown = document.querySelector(".menu-btn.side-dropdown");
 let chevronDown = sideDropdown.firstElementChild;
 let hamburgerIcon = document.getElementsByClassName("lnr-menu");
+let cartIcon = document.querySelector(".lnr-cart")
 let i;
-let crossIcon = document.querySelector(".lnr-cross");
+// let crossIcon = document.querySelector(".lnr-cross");
+let crossIcon = document.getElementsByClassName("lnr-cross")
 let overlay = document.getElementById("overlay");
 
 
@@ -48,9 +51,17 @@ function mediaQuery(maxWidth) {
       popup.style.transform = "translateX(0px)";
       on();
     }
+    function openCartPopup() {
+      cartPopup.style.transform = "translateX(0px)";
+      on();
+    }
     
     function closePopup(){
       popup.style.transform = "translateX(500px)";
+      off();
+    }
+    function closeCartPopup(){
+      cartPopup.style.transform = "translateX(500px)";
       off();
     }
     
@@ -59,9 +70,17 @@ function mediaQuery(maxWidth) {
       popup.style.transform = "translateX(0px)";
       on();
     }
+    function openCartPopup() {
+      cartPopup.style.transform = "translateX(0px)";
+      on();
+    }
     
     function closePopup(){
       popup.style.transform = "translateX(-500px)";
+      off();
+    }
+    function closeCartPopup(){
+      cartPopup.style.transform = "translateX(-500px)";
       off();
     }
     
@@ -70,9 +89,15 @@ function mediaQuery(maxWidth) {
     hamburgerIcon[i].addEventListener("click", openPopup);
   }
   
-  crossIcon.addEventListener("click", closePopup)
-  
+  for (i = 0; i < crossIcon.length; i++) {
+    crossIcon[i].addEventListener("click", closePopup);
+    crossIcon[i].addEventListener("click", closeCartPopup);
+  }
+
+  cartIcon.addEventListener("click", openCartPopup);
+
   overlay.addEventListener("click", closePopup)
+  overlay.addEventListener("click", closeCartPopup)
   
 }
 
@@ -95,11 +120,11 @@ sideDropdown.addEventListener("click", event => {
 }); 
 
 
-for (i = 0; i < hamburgerIcon.length; i++) {
-  hamburgerIcon[i].addEventListener("click", openPopup);
-}
+// for (i = 0; i < hamburgerIcon.length; i++) {
+//   hamburgerIcon[i].addEventListener("click", openPopup);
+// }
 
-crossIcon.addEventListener("click", closePopup)
+// crossIcon.addEventListener("click", closePopup)
 
-overlay.addEventListener("click", closePopup)
+// overlay.addEventListener("click", closePopup)
 

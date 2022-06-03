@@ -12,6 +12,7 @@
 </head>
 <body>
     <nav class="cluster">
+        <div id="overlay"></div>
         <div class="nav-logo--menu cluster">
             <a class="lnr lnr-menu" href="#"></a>
             <a class="logo" href="/index.html">Furniture<em>Galore</em></a>
@@ -42,9 +43,87 @@
             </form>
             <a class="lnr lnr-user" href="#"></a>
             <a class="lnr lnr-heart" href="#"></a>
-            <a class="lnr lnr-cart" href="/html/cart.html"></a>
+            <a class="lnr lnr-cart" href="#"></a>
             <a class="lnr lnr-menu" href="#"></a>
             <a class="lnr lnr-phone-handset" href="#"></a>
+        </div>
+        <div class="popup side-menu">
+            <span class="lnr lnr-cross"></span>
+            <a class="logo" href="/index.html">Furniture<em>Galore</em></a>
+            <ul class="side-menu-nav">
+                <li><a class="menu-btn" href="/index.html">Home</a></li>
+                <li><a class="menu-btn" href="/html/collection.html">New</a></li>
+                <li><a class="menu-btn side-dropdown"  href="#">Lounge<span class="lnr lnr-chevron-down"></span></a>
+                    <ul class="side-nav-submenu">
+                        <li><a class="menu-btn" href="/html/collection.html">Sofas</a></li>
+                        <li><a class="menu-btn" href="/html/collection.html">Armchairs</a></li>
+                        <li><a class="menu-btn" href="/html/collection.html">Recliners</a></li>
+                        <li><a class="menu-btn" href="/html/collection.html">Accent Chairs</a></li>
+                        <li><a class="menu-btn" href="/html/collection.html">Ottomans</a></li>
+                    </ul></li>
+                <li><a class="menu-btn" href="/html/collection.html">Dining</a></li>
+                <li><a class="menu-btn" href="/html/collection.html">Bedroom</a></li>
+                <li><a class="menu-btn" href="/html/collection.html">Outdoor</a></li>
+                <li><a class="menu-btn" href="/html/rooms.html">Rooms</a></li>
+            </ul>
+            <ul class="side-menu-links">
+                <li><a class="menu-btn" href="#">my account</a></li>
+                <li><a class="menu-btn" href="#">my likes</a></li>
+                <li><a class="menu-btn" href="#">my cart</a></li>  
+            </ul>
+            <ul class="contact-us">
+                <li><a class="menu-btn" href="#">contact us</a></li>
+            </ul>
+        </div>
+        <div class="popup side-cart">
+            <span class="lnr lnr-cross"></span>
+            <h1 class="cart-title">my cart</h1>
+            <div>
+                <div class="cart-card card-primary">
+                    <img src="/res/img/st-mortiz-three-seater.jpg" alt="image of sofa" class="cart-card-img img-fit">
+                    <div class="cart-card-txt stack">
+                        <h3 class="cart-card-title">st mortiz three-seater</h3>
+                        <h4 class="cart-card-desc">full grain leather, three-seater sofa</h4>
+                        <h4 class="cart-card-color-material">tawny - leather</h4>
+                    </div>
+                    <div class="cart-card-price-quantity">
+                        <h3 class="price">$999</h3>
+                        <div class="quantity-trash-container">
+                            <span class="lnr lnr-trash"></span>
+                            <div class="quantity-counter">
+                                <h5 class="quantity">1</h5>
+                                <button type="button" class="minus increment">-</button>
+                                <button type="button" class="plus increment">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-card">
+                    <img src="/res/img/cancun.jpg" alt="image of sofa" class="cart-card-img img-fit">
+                    <div class="cart-card-txt stack">
+                        <h3 class="cart-card-title">cancun loveseat</h3>
+                        <h4 class="cart-card-desc">soft, comfy fabric two-seater sofa</h4>
+                        <h4 class="cart-card-color-material">black - fabric</h4>
+                    </div>
+                    <div class="cart-card-price-quantity">
+                        <h3 class="price">$999</h3>
+                        <div class="quantity-trash-container">
+                            <span class="lnr lnr-trash"></span>
+                            <div class="quantity-counter">
+                                <h5 class="quantity">1</h5>
+                                <button type="button" class="minus increment">-</button>
+                                <button type="button" class="plus increment">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-cart-summary">
+                    <h4 class="subtotal">subtotal</h4>
+                    <h3 class="cart-summary-price price">$1,998</h3>
+                </div>
+                <a class="product-btn btn-secondary" href="#"><span class="lnr lnr-cart"></span>GO TO CART</a>
+
+            </div>
         </div>
     </nav>
     <div class="site-path">
@@ -298,9 +377,6 @@
             </div>
         </div>
     </div>
-    <script src="/js/product.js"></script>
-    <script src="/js/collection.js"></script>
-    <script src="/js/quantity.js"></script>
     <footer>
         <div class="footer stack centre">
             <div class="content">
@@ -308,5 +384,9 @@
             </div>
         </div>
     </footer>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/product.js"></script>
+    <script src="/js/collection.js"></script>
+    <script src="/js/quantity.js"></script>
 </body>
 </html>
