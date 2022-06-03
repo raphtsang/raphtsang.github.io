@@ -43,6 +43,7 @@ let i;
 // let crossIcon = document.querySelector(".lnr-cross");
 let crossIcon = document.getElementsByClassName("lnr-cross")
 let overlay = document.getElementById("overlay");
+let goToCartBtn = document.querySelector(".product-btn.btn-secondary")
 
 
 function mediaQuery(maxWidth) {
@@ -100,6 +101,11 @@ function mediaQuery(maxWidth) {
   overlay.addEventListener("click", closeCartPopup)
   
 }
+
+goToCartBtn.addEventListener("click", event => {
+  window.location.href = "/html/cart.html"
+})
+
 
 let maxWidth = window.matchMedia("(max-width: 700px)");
 mediaQuery(maxWidth);

@@ -58,6 +58,27 @@ for (i = 0; i < expand.length; i++) {
   });
 }
 
-const expandContainer = document.querySelector(".expand-container")
+// const expandContainer = document.querySelector(".expand-container")
 
-document.querySelector(".product-content").appendChild(expandContainer)
+// document.querySelector(".product-content").appendChild(expandContainer)
+
+function mediaQuery845(maxWidth845) {
+  const expandContainer = document.querySelector(".expand-container")
+  const productContentSidebar = document.querySelector(".product-content.sidebar")
+  const quantityLikesContainer = document.querySelector(".quantity-likes-container")
+  if (maxWidth845.matches) { 
+    document.querySelector(".product-content").appendChild(expandContainer)
+  }
+  else {
+    productContentSidebar.insertBefore(expandContainer, quantityLikesContainer)
+  }
+}
+
+let maxWidth845 = window.matchMedia("(max-width: 845px)");
+mediaQuery845(maxWidth845);
+maxWidth845.addEventListener("change", mediaQuery845);
+
+
+let addToCartBtn = document.querySelector(".product-btns-container .product-btn.btn-secondary")
+
+addToCartBtn.addEventListener
