@@ -57,3 +57,7 @@ for (i = 0; i < expand.length; i++) {
     } 
   });
 }
+
+const expandContainer = document.querySelector(".expand-container")
+
+document.querySelector(".product-content").appendChild(expandContainer)

@@ -968,7 +968,8 @@ input[type="checkbox"]:checked + .lnr-cart{
 .product-block {
     padding-top: 0;
     min-height: 69vh;
-    max-height: 100vh;
+    /* max-height: 100vh; */
+    max-height: 100%;
 }
 
 .product-title {
@@ -982,6 +983,10 @@ input[type="checkbox"]:checked + .lnr-cart{
 .product-color-title {
     padding-bottom: 0.5em;
     font-weight: 700;
+}
+
+.product-content .price {
+    flex-basis: 100%;
 }
 
 .product-block.sidebar-container {
@@ -1095,11 +1100,11 @@ input[type="checkbox"]:checked + .lnr-cart{
 .product-content .price {
     font-size: 3.236em;
     text-align: left;
+    margin-bottom: 0.7em;
 }
 
 .quantity-likes-container {
     position: relative;
-    margin-top: 2em;
 }
 
 .quantity-counter {
@@ -1145,7 +1150,8 @@ input[type="checkbox"]:checked + .lnr-cart{
 
 .quantity-likes-container .heart-btn-container {
     right: 60px;
-    bottom: 0px;
+    bottom: 0.5em;
+    top: auto;
 }
 
 .quantity-likes-container h5 {
@@ -1198,14 +1204,14 @@ input[type="checkbox"]:checked + .lnr-cart{
     height: 100%;
 }
 
+.mobile-product-content {
+    display: none;
+}
+
+
+
 /* END OF PRODUCT */
 /* START OF ROOMS */
-
-/* .rooms-img-container {
-    gap: 1.618em;
-    display: flex;
-    flex-wrap: wrap;
-} */
 
 .rooms {
     padding-top: 0;
@@ -2099,6 +2105,65 @@ footer a.logo em {
 }
 
 @media screen and (max-width: 845px) {
+    .product-block.sidebar-container {
+        flex-direction: column-reverse;
+    }
+
+    .product-block .not-sidebar{
+        position: initial;
+    }
+
+    .mobile-product-content {
+        display: block;
+        padding-bottom: 1.618em;
+    }
+
+    .mobile-product-content .quantity-counter {
+        display: none;
+    }
+
+    .product-content {
+        padding-right: 0;
+        padding-bottom: 2em;
+        flex-basis: initial;
+    }
+
+    .product-title {
+        padding-bottom: 0.5em;
+    }
+
+    
+
+    .quantity-likes-container .heart-btn-container {
+        bottom: auto;
+    }
+
+    /* .product-content .product-color-title,
+    .product-content .product-color-name, 
+    .product-content .color-picker, 
+    .product-content .expand-container,
+    .product-content .quantity-counter,
+    .product-content .product-btns-container {
+        display: none;
+    } */
+
+    .product-content .product-title, 
+    .product-content .product-desc-short,
+    .product-content .quantity-likes-container {
+        display: none;
+    }
+
+
+    .quantity-likes-container .price {
+        flex-basis: initial;
+        margin-bottom: auto;
+    }
+
+    .product-img-container .thumbnail-container {
+        margin-bottom: 2em;
+    }
+
+
     .cart-container {
         flex-direction: column;
         justify-content: flex-start;
@@ -2379,6 +2444,42 @@ footer a.logo em {
     /* END COLLECTION */
     /* START PRODUCT */
 
+    .product-img-container .slide-container img {
+        height: 32vh;
+    }
+
+    .thumbnail-container img {
+        height: auto;
+        max-width: calc(25vw - 3.236em)
+    }
+
+    .heart-btn-container + h5 {
+        font-size: 2.1em;
+    }
+
+    .product-content {
+        font-size: 1.2em;
+    }
+
+    .product-content .product-btns-container {
+        font-size: 1.618em;
+    }
+
+    .product-content .product-btns-container a {
+        padding: 1em 0;
+
+    }
+
+    .product-content .color-swatch {
+        height: 4em;
+        width: 4em;
+    }
+
+    .sofa-card .color-swatch {
+        height: 2.618em;
+        width: 2.618em;
+    }
+
     .product-rooms-container {
         padding-left: 0;
         padding-right: 0;
@@ -2388,6 +2489,7 @@ footer a.logo em {
         padding-left: 0.75em;
     }
 
+
     .product-rooms-img-container {
         display: flex;
         flex: 1;
@@ -2395,6 +2497,7 @@ footer a.logo em {
         overflow: scroll;
         overflow-y: hidden;
     }
+    
 
     .product-rooms-img {
         min-width: 85%;
