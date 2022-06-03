@@ -2,18 +2,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
   console.log('DOM fully loaded and parsed');
 });
 
-
-let dropdown = document.querySelector(".dropdown");
-let submenu = document.querySelector(".nav-submenu"); 
 let searchIcon = document.querySelector(".lnr-magnifier")
-
-dropdown.addEventListener("mouseover", event => { 
-    submenu.classList.toggle("show-sub");
-  }
-);
-
 let popup = document.querySelector(".popup")
 let cartPopup = document.querySelector(".popup.side-cart")
+let orderPopup = document.querySelector(".popup.down")
 let sideDropdown = document.querySelector(".menu-btn.side-dropdown");
 let chevronDown = sideDropdown.firstElementChild;
 let hamburgerIcon = document.getElementsByClassName("lnr-menu");
@@ -21,9 +13,11 @@ let cartIcon = document.querySelector(".lnr-cart")
 let i;
 let crossIcon = document.getElementsByClassName("lnr-cross")
 let overlay = document.getElementById("overlay");
-let goToCartBtn = document.querySelector(".product-btn.btn-secondary")
-let addToCartBtn = document.querySelector(".product-btns-container .product-btn.btn-secondary")
+let goToCartBtn = document.querySelector(".product-btn.btn-secondary");
+let addToCartBtn = document.querySelector(".product-btns-container .product-btn.btn-secondary");
+let viewOrderSummary = document.querySelector(".view-order-summary");
 
+// Overlay On/Off - for detecting click outside of popups
 function on() {
   document.getElementById("overlay").style.display = "block";
 }
@@ -33,6 +27,7 @@ function off() {
 }
 
 function mediaQuery(maxWidth) {
+  // Mobile View
   if (maxWidth.matches) { 
     function openPopup() {
       popup.style.transform = "translateX(0px)";
@@ -40,6 +35,10 @@ function mediaQuery(maxWidth) {
     }
     function openCartPopup() {
       cartPopup.style.transform = "translateX(0px)";
+      on();
+    }
+    function openOrderPopup() {
+      orderPopup.style.transform = "translateY(0px)";
       on();
     }
     
@@ -51,7 +50,12 @@ function mediaQuery(maxWidth) {
       cartPopup.style.transform = "translateX(500px)";
       off();
     }
-    
+    function closeOrderPopup() {
+      orderPopup.style.transform = "translateY(-45vh)";
+      off();
+    }
+  
+  // Desktop View 
   } else {
     function openPopup() {
       popup.style.transform = "translateX(0px)";
@@ -79,12 +83,12 @@ function mediaQuery(maxWidth) {
   for (i = 0; i < crossIcon.length; i++) {
     crossIcon[i].addEventListener("click", closePopup);
     crossIcon[i].addEventListener("click", closeCartPopup);
+    crossIcon[i].addEventListener("click", closeOrderPopup);
   }
-
-  // cartIcon.addEventListener("click", openCartPopup);
 
   overlay.addEventListener("click", closePopup);
   overlay.addEventListener("click", closeCartPopup);
+  overlay.addEventListener("click", closeOrderPopup);
 
   let sofaCardCartBtn = document.querySelectorAll(".lnr-cart")
 
@@ -94,8 +98,10 @@ function mediaQuery(maxWidth) {
   });
 });
 
+viewOrderSummary.addEventListener("click", openOrderPopup);
   addToCartBtn.addEventListener("click", openCartPopup);
   
+
 }
 
 goToCartBtn.addEventListener("click", event => {
