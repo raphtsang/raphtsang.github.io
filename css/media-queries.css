@@ -692,6 +692,11 @@
     .payment-success {
         width: auto;
     }
+
+    /* FOOTER */
+    footer {
+        font-size: 1.618em;
+    }
 }
 
 @media screen and (max-width: 371px) {
