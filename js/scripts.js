@@ -6,7 +6,7 @@ function goCollection(){
     location.href='/html/collection.html'; 
 }
 
-document.querySelectorAll(".main-collection-img, .main-collection-txt, .main-collection-title, .hero-title").forEach(item => {
+document.querySelectorAll(".main-collection-img, .main-collection-txt, .main-collection-title, .hero-title, .main-deals-title").forEach(item => {
   item.style.cursor = "pointer";
   item.addEventListener("click", goCollection);
 });
@@ -15,10 +15,22 @@ function goProduct(){
     location.href='/html/product.html'; 
 }
 
-document.querySelectorAll(".deals-preview, .main-deals-txt, .main-deals-title").forEach(item => {
+function goProduct2(){
+  location.href='/html/product2.html'; 
+}
+
+document.querySelectorAll(".deals-preview, .main-deals-txt").forEach(item => {
   item.style.cursor = "pointer";
-  item.addEventListener("click", goProduct);
+  item.addEventListener("click", event => {
+    if (item.classList.contains("sideboard")) {
+      goProduct2();
+    }
+    else {
+      goProduct();
+    }
+  });
 });
+
 
 
 // IMAGE SLIDE CHANGE

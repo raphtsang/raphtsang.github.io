@@ -37,6 +37,10 @@
 
 }
 
+.featured-sideboard {
+    object-position: 50% 70%;
+}
+
 .product-content {
     padding-right: 2em;
 }
@@ -44,6 +48,7 @@
 .product-img-container .slide-container img{
     height: 52vh;
 }
+
 
 .thumbnail-container {
     flex-direction: row;

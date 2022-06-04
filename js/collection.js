@@ -14,10 +14,20 @@ document.querySelectorAll(".main-collection-img, .main-collection-txt, .main-col
 function goProduct(){
     location.href='/html/product.html'; 
 }
+function goProduct2(){
+  location.href='/html/product2.html'; 
+}
 
-document.querySelectorAll(".large-card-title, .price, .large-card-desc, .featured-product-img, .sofa-card-img, .sofa-card-content > h4, .sofa-card-content > h5").forEach(item => {
+document.querySelectorAll(".main-deals-txt, .deals-preview, .featured-product-img, .sofa-card-img, .sofa-card-content > h4, .sofa-card-content > h5").forEach(item => {
   item.style.cursor = "pointer";
-  item.addEventListener("click", goProduct);
+  item.addEventListener("click", event => {
+    if (item.classList.contains("sideboard")) {
+      goProduct2();
+    }
+    else {
+      goProduct();
+    }
+  });
 });
 
 
