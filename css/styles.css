@@ -771,7 +771,6 @@ input[type="checkbox"]:checked + .lnr-heart > .svg-heart {
 /* FOOTER */
 footer{
     background-color: var(--color-black);
-    height: 20vh;
     margin-top: 5vh;
 }
 
@@ -790,13 +789,20 @@ footer a.logo em {
 }
 
 .footer > .content{
-    margin-top: auto;
-    margin-bottom: auto;
+    padding: 1.618em 0 2.618em 0;
 }
 
 .footer > .content > .logo{
     font-size: 1.8em;
+    margin-bottom: 0.5em;
 }
+
+footer a:not(.logo) {
+    color: white;
+    font-family: inherit;
+    font-size: 1.2em;
+}
+
 
 /* TEMPLATES + BTNS */
 .btn-cta {
@@ -878,6 +884,18 @@ footer a.logo em {
 
 .lnr-chevron-left {
     font-size: 1em;
+}
+
+.socials > * + * {
+    margin-left: 1.618em;
+    cursor: pointer;
+}
+
+.svg {
+    height: 1.618em;
+    color: white;
+    display: inline;
+    margin-top: 0.5em;
 }
 
 /* TEMP HEART TOGGLE*/
