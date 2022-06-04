@@ -141,6 +141,10 @@ input[type="text"]:focus::placeholder{
 
 /* END OF CART */
 /* START OF CHECKOUT */
+.view-order-summary {
+    display: none;
+}
+
 .mobile-order-summary {
     display: none;
 }

@@ -294,17 +294,13 @@
         box-shadow: -2px 0px 4px 0px #00000025;
         padding: 1.618em;
         width: fit-content;
+        max-width: calc(100vw * 0.75);
         font-size: 1.618em;
     }
 
     .popup .lnr-cross {
         text-align: right;
         position: relative;
-    }
-
-    .view-order-summary {
-        cursor: pointer;
-        text-decoration: underline;
     }
     
     .popup.down {
@@ -618,6 +614,13 @@
     h1.checkout-title {
         display: inline-block;
         font-size: 6em;
+    }
+
+    .view-order-summary {
+        display: block;
+        margin-top: 0.5em;
+        cursor: pointer;
+        text-decoration: underline;
     }
 
     .shipping-info {
