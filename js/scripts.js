@@ -8,10 +8,7 @@ function goCollection(){
 
 document.querySelectorAll(".main-collection-img, .main-collection-txt, .main-collection-title, .hero-title").forEach(item => {
   item.style.cursor = "pointer";
-  item.addEventListener("click", event => {
-    console.log("clicked!");
-    goCollection();
-  });
+  item.addEventListener("click", goCollection);
 });
 
 function goProduct(){
@@ -20,12 +17,11 @@ function goProduct(){
 
 document.querySelectorAll(".deals-preview, .main-deals-txt, .main-deals-title").forEach(item => {
   item.style.cursor = "pointer";
-  item.addEventListener("click", event => {
-    console.log("clicked!");
-    goProduct();
-  });
+  item.addEventListener("click", goProduct);
 });
 
+
+// IMAGE SLIDE CHANGE
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -53,10 +49,3 @@ function showSlides(nextSlideNumber) {
   dashes[slideIndex-1].className += " active";
 }
 
-function on() {
-  document.getElementById("overlay").style.display = "block";
-}
-
-function off() {
-  document.getElementById("overlay").style.display = "none";
-}

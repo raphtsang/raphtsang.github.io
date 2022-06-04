@@ -33,10 +33,6 @@ function shippingFocus(item) {
 
 function cardFocus(item) {
     timesClicked = 3
-    // if (!(checkoutBtn.classList.contains("pay-now"))) {
-    //     checkoutBtn.classList.toggle("pay-now");
-    //     checkoutBtn.innerHTML = "PAY $1,998";
-    // }
     item.className = item.className.replaceAll(" collapsed", "");
         document.querySelectorAll(".customer-info, .shipping-info").forEach(item => {
             item.className += " collapsed";  
@@ -65,26 +61,15 @@ document.querySelectorAll(".card-info").forEach(item => {
 });
 });
 
-// checkoutBtn.forEach(item => {
-//     item.addEventListener("click", event => {
-//     for(i = 0; i < 2; i++) {
-//         console.log("clicked",[i])
-//     }
-// });
-// });
 
 let customerInfo = document.querySelector(".customer-info")
 let shippingInfo = document.querySelector(".shipping-info");
 let cardInfo = document.querySelector(".card-info");
 
-const plusIncrement = () => {
-    
-    // console.log("clicked!");
-    console.log(timesClicked)
+const nextStep = () => {
+        console.log(timesClicked)
     if (timesClicked == 1) {
-        // validateCustomerForm();
         document.getElementById("customer-info").submit.click();
-        // shippingFocus(shippingInfo);
         checkoutBtn.setAttribute("href", "#");
         if (checkoutBtn.classList.contains("pay-now")) {
             checkoutBtn.classList.toggle("pay-now");
@@ -96,7 +81,6 @@ const plusIncrement = () => {
     }
     if (timesClicked == 3) {
         document.getElementById("card-info").submit.click();
-        // checkoutBtn.classList.toggle("pay-now");
         checkoutBtn.className = checkoutBtn.className += " pay-now";
         checkoutBtn.innerHTML = "PAY $1,998";
     }
@@ -105,7 +89,7 @@ const plusIncrement = () => {
     }
   };
 
-checkoutBtn.addEventListener("click", plusIncrement);
+checkoutBtn.addEventListener("click", nextStep);
 
 function validateCustomerForm() {
     let x = document.forms["customer-info"]["first-name", "last-name","email"].value;
@@ -114,7 +98,6 @@ function validateCustomerForm() {
         return false;
     }
     else {
-        // alert("True");
         timesClicked = 1;
         console.log(timesClicked)
         shippingFocus(shippingInfo);
@@ -129,7 +112,6 @@ function validateShippingForm() {
         return false;
     }
     else {
-        // alert("True");
         timesClicked = 2;
         cardFocus(cardInfo);
         return true;
@@ -143,7 +125,6 @@ function validateCardForm() {
         return false;
     }
     else {
-        // alert("True");
         window.location.href = "/html/payment-success.html"
         return true;
     }

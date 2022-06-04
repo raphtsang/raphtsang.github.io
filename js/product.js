@@ -8,13 +8,10 @@ function goRooms(){
 
 document.querySelectorAll(".product-rooms-img, .product-rooms-title").forEach(item => {
   item.style.cursor = "pointer";
-  item.addEventListener("click", event => {
-    console.log("clicked!");
-    goRooms();
-  });
+  item.addEventListener("click", goRooms)
 });
 
-
+// PRODUCT IMAGE and THUMBNAIL
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -43,8 +40,8 @@ function showSlides(nextSlideNumber) {
   thumbs[slideIndex-1].className += " active";
 }
 
+// EXPAND DETAILS
 var expand = document.getElementsByClassName("expand");
-// var i;
 
 for (i = 0; i < expand.length; i++) {
   expand[i].addEventListener("click", function() {
@@ -58,10 +55,7 @@ for (i = 0; i < expand.length; i++) {
   });
 }
 
-// const expandContainer = document.querySelector(".expand-container")
-
-// document.querySelector(".product-content").appendChild(expandContainer)
-
+// CHANGE DETAILS LOCATION for MOBILE
 function mediaQuery845(maxWidth845) {
   const expandContainer = document.querySelector(".expand-container")
   const productContentSidebar = document.querySelector(".product-content.sidebar")

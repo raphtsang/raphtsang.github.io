@@ -20,7 +20,7 @@
         <div class="nav-items">
             <ul class="cluster">
                 <li><a class="menu-btn" href="/html/collection.html">New</a></li>
-                <li><a class="menu-btn dropdown"  href="/html/collection.html">Lounge<span class="lnr lnr-chevron-down"></span></a>
+                <li class="dropdown"><a class="menu-btn"  href="/html/collection.html">Lounge<span class="lnr lnr-chevron-down"></span></a>
                     <ul class="nav-submenu">
                         <li><a class="menu-btn" href="/html/collection.html">Sofas</a></li>
                         <li><a class="menu-btn" href="/html/collection.html">Armchairs</a></li>
@@ -37,7 +37,7 @@
         <div class="nav-icons">
             <form action="/html/collection.html">
                 <a class="lnr lnr-magnifier" href="#">
-                    <input type="text" name="searchbar" id="searchbar">
+                    <input type="text" name="searchbar" id="searchbar" placeholder="search...">
                     <input type="submit" hidden/>
                 </a>
             </form>
@@ -69,7 +69,7 @@
             <ul class="side-menu-links">
                 <li><a class="menu-btn" href="#">my account</a></li>
                 <li><a class="menu-btn" href="#">my likes</a></li>
-                <li><a class="menu-btn" href="#">my cart</a></li>  
+                <li><a class="menu-btn" href="/html/cart.html">my cart</a></li>  
             </ul>
             <ul class="contact-us">
                 <li><a class="menu-btn" href="#">contact us</a></li>
@@ -91,7 +91,7 @@
                         <div class="quantity-trash-container">
                             <span class="lnr lnr-trash"></span>
                             <div class="quantity-counter">
-                                <h5 class="quantity">1</h5>
+                                <input class="quantity" min="0" type="number" name="quantity" value="1">
                                 <button type="button" class="minus increment">-</button>
                                 <button type="button" class="plus increment">+</button>
                             </div>
@@ -110,7 +110,7 @@
                         <div class="quantity-trash-container">
                             <span class="lnr lnr-trash"></span>
                             <div class="quantity-counter">
-                                <h5 class="quantity">1</h5>
+                                <input class="quantity" min="0" type="number" name="quantity" value="1">
                                 <button type="button" class="minus increment">-</button>
                                 <button type="button" class="plus increment">+</button>
                             </div>
@@ -147,7 +147,7 @@
                         <div class="quantity-trash-container">
                             <span class="lnr lnr-trash"></span>
                             <div class="quantity-counter">
-                                <h5 class="quantity">1</h5>
+                                <input class="quantity" min="0" type="number" name="quantity" value="1">
                                 <button type="button" class="minus increment">-</button>
                                 <button type="button" class="plus increment">+</button>
                             </div>
@@ -166,7 +166,7 @@
                         <div class="quantity-trash-container">
                             <span class="lnr lnr-trash"></span>
                             <div class="quantity-counter">
-                                <h5 class="quantity">1</h5>
+                                <input class="quantity" min="0" type="number" name="quantity" value="1">
                                 <button type="button" class="minus increment">-</button>
                                 <button type="button" class="plus increment">+</button>
                             </div>
@@ -200,6 +200,5 @@
         </div>
     </main>
     <script src="/js/navbar.js"></script>
-    <script src="/js/quantity.js"></script>
 </body>
 </html>

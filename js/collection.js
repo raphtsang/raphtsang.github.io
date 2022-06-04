@@ -8,10 +8,7 @@ function goCollection(){
 
 document.querySelectorAll(".main-collection-img, .main-collection-txt, .main-collection-title, .hero-title").forEach(item => {
   item.style.cursor = "pointer";
-  item.addEventListener("click", event => {
-    console.log("clicked!");
-    goCollection();
-  });
+  item.addEventListener("click", goCollection);
 });
 
 function goProduct(){
@@ -20,12 +17,11 @@ function goProduct(){
 
 document.querySelectorAll(".large-card-title, .price, .large-card-desc, .featured-product-img, .sofa-card-img, .sofa-card-content > h4, .sofa-card-content > h5").forEach(item => {
   item.style.cursor = "pointer";
-  item.addEventListener("click", event => {
-    console.log("clicked!");
-    goProduct();
-  });
+  item.addEventListener("click", goProduct);
 });
 
+
+// SWATCH and NAME CHANGE
 let colorPicker = document.getElementsByClassName("color-picker");
 
 let swatchIndex = 1;

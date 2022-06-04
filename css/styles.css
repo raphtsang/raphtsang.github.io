@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "/css/collection"
 /* Golden Ratio 1.618 2.618 4.236 6.854 11.089 17.942 */
 
 :root{
@@ -103,7 +104,7 @@ nav {
     transform: scaleY(1);
 }
 
-.dropdown:hover > .lnr {
+.dropdown:hover .lnr {
     transform: scaleY(-1);
 }
 
@@ -484,6 +485,7 @@ p {
 }
 .main-collection-txt {
     font-weight: 600;
+    line-height: 120%;
 }
 
 .img-fit {
@@ -574,7 +576,6 @@ p {
     margin-top: 0.25em;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden;
 }
 
 .main-deals-card:first-child {
@@ -1187,9 +1188,26 @@ input[type="checkbox"]:checked + .lnr-cart{
 }
 
 .quantity {
-    padding: 0.5em;
+    padding: 0.4em;
     text-align: center;
+    width: calc(100px - 1em);
+    border: none;
+    background-color: #00000000;
+    font-family: inherit;
+    font-size: 1.5em;
 }
+
+.quantity:focus {
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}   
 
 .increment {
     background-color: #FFFFFF00;
@@ -1317,7 +1335,7 @@ input[type="checkbox"]:checked + .lnr-cart{
 .load-more {
     text-decoration: underline;
     background-color: #00000000;
-    font-family: "Inter", sans-serif;
+    font-family: inherit;
     font-size: 2em;
     border: none;
     cursor: pointer;
@@ -1499,7 +1517,7 @@ input[type="checkbox"]:checked + .lnr-cart{
     padding: 0.5em;
     width: 65%;
     background-color: var(--color-bg);
-    font-family: "Inter", sans-serif;
+    font-family: inherit;
 }
 
 .cart-end input[type="text"]:focus {
@@ -1517,7 +1535,7 @@ input[type="text"]:focus::placeholder{
     border: none;
     background-color: transparent;
     padding: 0.5em;
-    font-family: "Inter", sans-serif;
+    font-family: inherit;
     color: var(--color-black);
     width: 35%;
     justify-content: flex-end;
@@ -1543,11 +1561,14 @@ input[type="text"]:focus::placeholder{
 
 span.spacer {
     grid-column: 1/3;
-    box-shadow: inset 0px -1px 0px 0px var(--color-grey);
     padding-top: 1em;
 }
 
-    .checkout {
+.checkout span.spacer {
+    box-shadow: inset 0px -1px 0px 0px var(--color-grey);
+}
+
+.checkout {
     padding-top: 0;
 }
 
@@ -1569,7 +1590,7 @@ form em {
     border-radius: 8px;
     height: 3em;
     font-size: 1.618em;
-    font-family: "Inter", sans-serif;
+    font-family: inherit;
     padding: 0 0.75em;
 }
 
@@ -2405,7 +2426,7 @@ footer a.logo em {
         position: fixed;
         top: 0;
         z-index: 5;
-        transform: translateY(-45vh);
+        transform: translateY(-80vh);
         transition: all 1s ease;
         background-color: var(--color-bg);
         border-bottom-right-radius: 16px;
@@ -2417,7 +2438,7 @@ footer a.logo em {
         flex-direction: column;
         max-width: 100vw;
         width: calc(100vw - 3.236em);
-        max-height: calc(100vh * 0.4);
+        height: fit-content;
         margin-top: 0;
 
     }
@@ -2427,6 +2448,7 @@ footer a.logo em {
         gap: 1.618em;
         align-items: flex-end;
         margin-top: 6.854em;
+        margin-bottom: 3.236em;
     }
 
     .mobile-order-summary .cart-summary-title.order {
@@ -2776,5 +2798,12 @@ footer a.logo em {
 
     .payment-success {
         width: auto;
+    }
+}
+
+@media screen and (max-width: 371px) {
+    #searchbar {
+        bottom: 0.9em;
+        right: -0.9em;
     }
 }
