@@ -1,0 +1,204 @@
+@import "/css/collection.css";
+/* START OF PRODUCT */
+
+.product-block {
+    padding-top: 0;
+    min-height: 69vh;
+    max-height: 100%;
+}
+
+.product-title {
+    padding-bottom: 1em;
+}
+
+.product-desc-short {
+    padding-bottom: 1em;
+}
+
+.product-color-title {
+    padding-bottom: 0.5em;
+    font-weight: 700;
+}
+
+.product-content .price {
+    flex-basis: 100%;
+}
+
+.product-block.sidebar-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.product-block .not-sidebar {
+    margin-top: 0;
+    position: sticky;
+    align-self: flex-start;
+    top: 3.236em;
+
+}
+
+.product-content {
+    padding-right: 2em;
+}
+
+.product-img-container .slide-container img{
+    height: 52vh;
+}
+
+.thumbnail-container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1.618em;
+    overflow: scroll;
+    overflow-y: hidden;
+    margin-top: 1em;
+    padding: 4px;
+    position: relative;
+    left: -4px;
+    right: -8.618em;
+}
+
+.thumbnail-container img {
+    cursor: pointer;
+    height: 22vh;
+}
+
+.thumbnail-img.active {
+    transition: all 0.2s ease;
+    box-shadow: 0px 0px 0px 4px var(--color-primary);
+}
+
+
+.product-color-name {
+    margin-bottom: 1em;
+}
+
+.expand-container {
+    padding: 1.5em 0;
+}
+
+.expand {
+    background-color: #FFFFFF00;
+    border: none;
+    padding: 0.5em 0 0.5em 0;
+    font-family: "Inter", sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--color-black);
+    width: 100%;
+    text-align: left;
+    position: relative;
+    box-shadow: 0px 1px 0px 0px var(--color-grey);
+}
+
+.expand .lnr-chevron-down {
+    font-size: 1em;
+    position: absolute;
+    right: 0;
+}
+
+.expand.active {
+    box-shadow: 0px 0px 0px 0px #FFFFFF00;
+}
+
+.expand.active .lnr-chevron-down{
+    transform: scaleY(-1);
+}
+
+.expand-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    box-shadow: 0px 1px 0px 0px var(--color-grey);
+
+}
+
+.expand-content p {
+    padding-bottom: 0.8em;
+    box-shadow: 0px 1px 0px 0px var(--color-grey);
+}
+
+.expand-content p em {
+    font-weight: 700;
+}
+
+.product-content .price {
+    font-size: 3.236em;
+    text-align: left;
+    margin-bottom: 0.7em;
+}
+
+.quantity-likes-container .heart-btn-container {
+    right: 60px;
+    bottom: 0.5em;
+    top: auto;
+}
+
+.product-btns-container {
+    margin-top: 0.5em;
+}
+
+.product-rooms-img-container {
+    justify-content: space-between;
+    gap: 1.618em;
+}
+
+.product-rooms-img {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    height: 100%;
+}
+
+.mobile-product-content {
+    display: none;
+}
+
+
+
+/* END OF PRODUCT */
+/* START OF ROOMS */
+
+.rooms {
+    padding-top: 0;
+    justify-content: center;
+}
+
+.rooms-title {
+    width: 100%;
+    text-align: start;
+}
+
+.rooms-img-container {
+    gap: 1.618em;
+}
+
+.rooms-img-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.618em;
+}
+
+.rooms-img-container li{
+    height: 40vh;
+    flex-grow: 1;
+}
+
+.rooms-img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+    border-radius: 8px;
+}
+
+.load-more {
+    text-decoration: underline;
+    background-color: #00000000;
+    font-family: inherit;
+    font-size: 2em;
+    border: none;
+    cursor: pointer;
+}
+
+/* END OF ROOMS */
