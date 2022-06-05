@@ -375,6 +375,10 @@
         padding: 1em 0 1em 0;
     }
 
+    .slide-container img {
+        height: 36em;
+    }
+
     .padding {
         padding: 4.618em 3.236em 2.618em 3.236em;
     }
