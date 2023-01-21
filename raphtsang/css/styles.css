@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --colour-bg: #2e2e2e;
+    --colour-light: #7c7eaa;
+    --colour-primary: #535386;
+    --colour-dark: #111c4e;
+    --colour-grey: #585858;
+    --colour-lightgrey: #818181;
+    font-size: 11px;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #585858;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 12rem;
+    font-weight: 800;
+    color: var(--colour-lightgrey);
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--colour-lightgrey);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.hero a {
+    text-decoration: none;
+    text-align: center;
+}
+
+.hero a:hover {
+    transform: scale(1.05);
+}
+
+.hero > * {
+    transition: all ease 0.5s;
+}
+
+.hero a:hover > * {
+    color: var(--colour-light);
+}
