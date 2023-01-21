@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    color: #fafafa;
+    background-color: #2e2e2e;
+}
+
+input {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 2.1em;
+    color: #eaeaea;
+    outline: none;
+}
+
+#searchItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: visible;
+    /* flex-direction: row; */
+}
+
+.container {
+    overflow: hidden;
+}
+  
+.filterDiv {
+    /* float: left; */
+    /* background-color: #2196F3; */
+    color: #323437;
+    width: fit-content;
+    line-height: 20px;
+    text-align: center;
+    margin: 2px;
+    padding: 5px;
+    /* Hidden by default */
+    /* display: none;  */
+    position: relative;
+    /* display: block;
+    overflow: auto; */
+    transition: ease-in-out 0.3s;
+}
+  
+/* The "show" class is added to the filtered elements */
+.show {
+display: block;
+}
+  
+img {
+    width: 7vw;
+    min-height: 26.5vh;
+    position: relative;
+}
+
+.filterDiv:hover {
+    background-color: #fafafa;
+    transform: scale(1.2);
+    z-index: 99;
+    border-radius: 4px;
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.3);
+    
+}
+
+a {
+    display: none;
+}
+
+/* search bar */
+#searchInput {
+    margin-top: 20px;
+    border-radius: 16px;
+    border: none;
+    width: 90vw;
+    text-align: center;
+    background-color: #2e2e2e;
+    outline: none;
+    transition: all ease-in-out 0.2s;
+}
+
+#searchInput:hover {
+    background-color: #4d4d4d;
+}
+
+
+#searchInput:focus {
+    background-color: #3d3d3d;
+}
+
+
+@media screen and (max-width: 1251px) {
+    img {
+        min-width: 15vw;
+        min-height: 26.5vh;
+    }
+
+    #searchItems .imgSet::before {
+        content: "";
+    }
+}
+
+@media (orientation: portrait) {
+    img {
+        min-width: 26.5vw;
+        max-height: 75vh;
+    }
+
+    #searchItems .imgSet::before {
+        content: "";
+    }
+
+}
+

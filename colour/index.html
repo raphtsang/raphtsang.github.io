@@ -4,9 +4,176 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <script></script>
+    <title>Outfit Colours</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <!-- Search Input -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="🔎︎ search for a colour, week (one-twelve), or activity (work/class/weekend)...">
+    </div>
+    <div id = "searchItems"class="container">
+        <!-- Work -->
+        <!-- <div id="Work" class="imgSet"> -->
+            <div class="filterDiv">
+                <a href="#">beige olive green grey work w1 Week One Week 1</a>
+                <img src="img/Work W1.png" alt="Work Week 1" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">green black white work w2 Week Two Week 2</a>
+                <img src="img/Work W2.png" alt="Work Week 2" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">beige khaki burgundy maroon work w3 Week Three Week 3</a>
+                <img src="img/Work W3.png" alt="Work Week 3" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">beige white black olive green work w4 Week Four Week 4</a>
+                <img src="img/Work W4.png" alt="Work Week 4" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">black pink green blue purple white yellow red work w5 Week Five Week 5</a>
+                <img src="img/Work W5.png" alt="Work Week 5" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">navy blue white black work w6 Week Six Week 6</a>
+                <img src="img/Work W6.png" alt="Work Week 6" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">beige black white navy blue work w7 Week Seven Week 7</a>
+                <img src="img/Work W7.png" alt="Work Week 7" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">beige white navy blue yellow work w8 Week Eight Week 8</a>
+                <img src="img/Work W8.png" alt="Work Week 8" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">black grey white work w9 Week Nine Week 9</a>
+                <img src="img/Work W9.png" alt="Work Week 9" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">olive green grey black white work w10 Week Ten Week 10</a>
+                <img src="img/Work W10.png" alt="Work Week 10" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">white light blue khaki work w11 Week Eleven Week 11</a>
+                <img src="img/Work W11.png" alt="Work Week 11" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">beige black white work w12 Week Twelve Week 12</a>
+                <img src="img/Work W12.png" alt="Work Week 12" onClick="window.open(this.src)">
+            </div>
+        <!-- </div> -->
+        <!-- Class -->
+        <!-- <div id="Class" class="imgSet"> -->
+            <div class="filterDiv">
+                <a href="#">purple light blue white grey Class w1 Week One Week 1</a>
+                <img src="img/Class W1.png" alt="Class Week 1" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">black brown khaki white grey Class w2 Week Two Week 2</a>
+                <img src="img/Class W2.png" alt="Class Week 2" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">light blue turquoise white grey Class w3 Week Three Week 3</a>
+                <img src="img/Class W3.png" alt="Class Week 3" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">beige white black khaki grey Class w4 Week Four Week 4</a>
+                <img src="img/Class W4.png" alt="Class Week 4" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">beige white black grey light blue Class w5 Week Five Week 5</a>
+                <img src="img/Class W5.png" alt="Class Week 5" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">black red khaki white Class w6 Week Six Week 6</a>
+                <img src="img/Class W6.png" alt="Class Week 6" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">purple light blue white black Class w7 Week Seven Week 7</a>
+                <img src="img/Class W7.png" alt="Class Week 7" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">black pink olive green blue purple white yellow red Class w8 Week Eight Week 8</a>
+                <img src="img/Class W8.png" alt="Class Week 8" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">light grey beige olive green black white Class w9 Week Nine Week 9</a>
+                <img src="img/Class W9.png" alt="Class Week 9" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">beige orange red black white Class w10 Week Ten Week 10</a>
+                <img src="img/Class W10.png" alt="Class Week 10" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">beige brown white light blue red black Class w11 Week Eleven Week 11</a>
+                <img src="img/Class W11.png" alt="Class Week 11" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">green purple khaki black white Class w12 Week Twelve Week 12</a>
+                <img src="img/Class W12.png" alt="Class Week 12" onClick="window.open(this.src)">
+            </div>
+        <!-- </div> -->
+        <!-- Weekend -->
+        <!-- <div id="Weekend"class="imgSet"> -->
+            <div class="filterDiv">
+                <a href="#">black white light blue grey Weekend w1 Week One Week 1</a>
+                <img src="img/Weekend W1.png" alt="Weekend Week 1" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">blue turquoise white olive green Weekend w2 Week Two Week 2</a>
+                <img src="img/Weekend W2.png" alt="Weekend Week 2" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">black green red blue white burgundy maroon Weekend w3 Week Three Week 3</a>
+                <img src="img/Weekend W3.png" alt="Weekend Week 3" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">black yellow blue white Weekend w4 Week Four Week 4</a>
+                <img src="img/Weekend W4.png" alt="Weekend Week 4" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">black yellow light blue white red Weekend w5 Week Five Week 5</a>
+                <img src="img/Weekend W5.png" alt="Weekend Week 5" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">beige light blue white grey Weekend w6 Week Six Week 6</a>
+                <img src="img/Weekend W6.png" alt="Weekend Week 6" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">beige brown red blue black white navy blue Weekend w7 Week Seven Week 7</a>
+                <img src="img/Weekend W7.png" alt="Weekend Week 7" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">beige white olive green grey Weekend w8 Week Eight Week 8</a>
+                <img src="img/Weekend W8.png" alt="Weekend Week 8" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">olive green khaki black white Weekend w9 Week Nine Week 9</a>
+                <img src="img/Weekend W9.png" alt="Weekend Week 9" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">black biege grey Weekend w10 Week Ten Week 10</a>
+                <img src="img/Weekend W10.png" alt="Weekend Week 10" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">purple white olive green grey Weekend w11 Week Eleven Week 11</a>
+                <img src="img/Weekend W11.png" alt="Weekend Week 11" onClick="window.open(this.src)">
+            </div>
+            <div class="filterDiv">
+                <a href="#">beige black white grey yellow Weekend w12 Week Twelve Week 12</a>
+                <img src="img/Weekend W12.png" alt="Weekend Week 12" onClick="window.open(this.src)">
+            </div>
+        <!-- </div> -->
+    </div>
+    <!-- <span>
+        <input type="checkbox" id="setLabel" name="Hide Labels">
+        <label for="setLabel">hide labels</label>
+    </span> -->
+    <script src="scripts.js"></script>
 </body>
 </html>
