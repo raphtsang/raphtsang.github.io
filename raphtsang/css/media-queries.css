@@ -1,19 +1,107 @@
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1110px) {
+    /* h1 {
+        width: 63vw;
+    } */
+
+    .hero .lettermark {
+        width: 50vw;
+    }
+
+    h3 {
+        width: auto;
+    }
+
+    .work-cont h2 {
+        padding-top: 1.6rem;
+    }
+
+    .hero .about {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+    }
+
+    .hero .about img{
+        grid-column: auto;
+        grid-row: auto;
+        aspect-ratio: 1 / 1;
+        min-width: 100%;
+        height: auto;
+    }
+
+    .hero .about p{
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .hero.about .lettermark {
+        visibility: hidden;
+    }
+    
+    .hero.about .lnr-smile {
+        visibility: hidden;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    footer h1 {
+        width: 75vw;
+    }
+
+    footer ul {
+        grid-row: 2 / 3;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    footer {
+        padding-top: 15vh;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    h1, h2, h3, h4, p, a {
+        line-height: 1.1;
+    }
+
     h1 {
-        font-size: 8rem;
+        font-size: 4rem;
+        width: 360px;
+    }
+
+    h2 {
+        font-size: 2.5rem;
     }
 
     h3 {
         font-size: 1.6rem;
-    }
-}
-
-@media screen and (max-width: 760px) {
-    h1 {
-        font-size: 3.2rem;
+        width: auto;
     }
 
-    h3 {
-        font-size: 1rem;
+    .hero .lettermark {
+        position: relative;
+        /* bottom: 0; */
+        top: -2vh;
+        left: 0;
+        width: max-content;
+    }
+
+    .hero .lnr-smile {
+        visibility: hidden;
+    }
+
+    .filters {
+        overflow-x: scroll;
+    }
+
+    footer h1 {
+        width: 85vw;
+    }
+
+    footer > h1 .lnr {
+        margin-left: 1rem;
     }
 }

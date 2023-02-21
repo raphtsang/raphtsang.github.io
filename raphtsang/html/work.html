@@ -9,21 +9,19 @@
     <link rel="stylesheet" href="/css/media-queries.css">
     <!-- to import icons from linearicons from https://linearicons.com/ -->
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-    <title>Raph Tsang Portfolio</title>
+    <title>Raph Tsang | Work</title>
 </head>
 <body>
     <header>
         <img class="wordmark" onclick="goHome()" src="/res/svg/raphtsang-Wordmark.svg" alt="Raphtsang's Logo (wordmark)">
         <ul class="header-nav">
-            <li><a href="/html/work.html">work</a></li>
+            <li><a href="/html/work.html" class="active">work</a></li>
             <li><a href="/html/about.html">about</a></li>
             <li><a href="mailto:raphaeltsang88@gmail.com">contact</a></li>
         </ul>
-    </header>    
-    <div class="hero">
-            <h1><br><em class="pink">Hi.</em><br><br>I'm <a href="/html/about.html">Raphael Tsang</a>,<br> a <em class="purple">UI/UX</em> Designer!</h1>
-            <img class="lettermark" src="/res/svg/raphtsang-Lettermark.svg" alt="Raphtsang's Logo (lettermark)">
-            <a href="#footer" class="lnr lnr-smile"></a>
+    </header>
+    <div class="title">
+        <h1>Work</h1>
     </div>
     <div class="main-work">
         <div class="filters">
@@ -64,7 +62,46 @@
                 <h2>Neon + Cyberpunk<em> - 2022</em></h2>
                 <h3>Cyberpunk 2077-inspired experimentation with neon lights, on a 126x126 voxel room scale.</h3>
             </div>
-            <h3 onclick="goWork()">All Work <a href="#" class="lnr lnr-arrow-right-circle"></a></h3> 
+            <div class="filter-cont uiux" onclick="goInsp()">
+                <div class="imgbtn">
+                    <img src="/res/img/20230221-raphtsang-inspirock-screenshot.png" alt="Results collected from remote surveying">
+                    <button class="disabled" onclick="goUIUX()">UI/UX</button>
+                </div>
+                <h2>Inspirock<em> - 2022</em></h2>
+                <h3>Evaluating the usability and design of the trip planning website Inspirock.</h3>
+            </div>
+            <div class="filter-cont graphic" onclick="goMario()">
+                <div class="imgbtn">
+                    <img src="/res/img/20230221-raphtsang-mario-world-web-res.jpg" alt="Final Mario World axonometric rendering">
+                    <button class="disabled" onclick="goGraphic()">Graphic</button>
+                </div>
+                <h2>Mario World<em> - 2021</em></h2>
+                <h3>Transforming 2D-elevations into 3D-projections, resulting in an axonometric Mario world composition.</h3>
+            </div>
+            <div class="filter-cont graphic" onclick="goFVF()">
+                <div class="imgbtn">
+                    <img src="/res/img/20230221-raphtsang-frame-vs-field-perspective-2.jpg" alt="Final Perspective Render of Frame vs. Field">
+                    <button class="disabled" onclick="goGraphic()">Graphic</button>
+                </div>
+                <h2>Frame vs. Field<em> - 2021</em></h2>
+                <h3>Analysis + interpretation of Italo Calvino's Invisible Cities through manipulating the Old Quad.</h3>
+            </div>
+            <div class="filter-cont graphic" onclick="goSlchld()">
+                <div class="imgbtn">
+                    <img src="/res/img/20230221-raphtsang-slchld-hero-web-res.jpg" alt="Mockup of slchld Vinyl Concept and VHS stills">
+                    <button class="disabled" onclick="goGraphic()">Graphic</button>
+                </div>
+                <h2>slchld Vinyl Concept<em> - 2021</em></h2>
+                <h3>Reimagining of vinyl record and sleeve, and other collateral for the slchld single.</h3>
+            </div>
+            <div class="filter-cont graphic" onclick="goOutfit()">
+                <div class="imgbtn">
+                    <img src="/res/img/20230221-raphtsang-colour-in-outfits-collage-web-res.jpg" alt="A collage done in conjunction with the interactive index">
+                    <button class="disabled" onclick="goGraphic()">Graphic</button>
+                </div>
+                <h2>Outfit Colour Index<em> - 2022</em></h2>
+                <h3>Interactive index of work/class/weekend outfits over the span of twelve weeks.</h3>
+            </div>
         </div>
     </div>
     <footer id="footer">

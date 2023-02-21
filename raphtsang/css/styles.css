@@ -1,54 +1,425 @@
+/* 16px 
+0.625rem: captions (italics)
+1rem: paragraph (16px)
+1.6rem: heading 4 (25px)
+2.5rem: heading 3 (40px)
+4rem:  heading 2 (64px)
+6.6rem: heading 1 (105px)
+*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('general-sans.css');
 
 :root{
-    --colour-bg: #2e2e2e;
-    --colour-light: #7c7eaa;
-    --colour-primary: #535386;
-    --colour-dark: #111c4e;
-    --colour-grey: #585858;
-    --colour-lightgrey: #818181;
-    font-size: 11px;
+    --colour-bg: #181c20;
+    --colour-light: #e1e5e8;
+    --colour-primary: #a9d4d8;
+    --colour-secondary: #f6b8c2;
+    --colour-accent: #8567f7;
+    --colour-dark: #181c20;
+    --colour-grey: #283842;
+    /* --colour-lightgrey: #818181; */
+    font-size: 16px;
+    --General-Sans: "GeneralSans-Variable", "Inter", Helvetica, Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Inter", sans-serif;
-    background-color: #585858;
-    overflow: hidden;
+    font-family: var(--General-Sans);
+    background-color: var(--colour-bg);
+    font-weight: 300;
+}
+
+h1, h2, h3, h4 {
+    letter-spacing: -.1rem;
+    position: relative;
+    z-index: 2;
+}
+
+body > div {
+    margin: 0 5vw 0 5vw;
 }
 
 h1 {
-    font-size: 12rem;
-    font-weight: 800;
-    color: var(--colour-lightgrey);
+    font-size: 6.6rem;
+    font-weight: 700;
+    color: var(--colour-primary);
+    width: 660px;
+}
+
+h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--colour-primary);
+}
+
+h2 > em {
+    font-weight: 300;
 }
 
 h3 {
-    font-size: 2rem;
-    font-weight: 300;
-    color: var(--colour-lightgrey);
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--colour-light);
+    width: 50vw;
 }
 
+p {
+    color: var(--colour-light);
+    line-height: 1.1;
+}
+
+a {
+    color: var(--colour-primary);
+    text-decoration: underline;
+    text-decoration-color: #a9d4d800;
+    transition: text-decoration-color ease-out 0.15s;
+}
+
+a:hover {
+    text-decoration-color: var(--colour-primary);
+}
+
+button {
+    outline: none;
+    border-width: 0.2rem;
+    border-color: var(--colour-primary);
+    border-radius: 5rem;
+    border-style: solid;
+    background-color: var(--colour-grey);
+    color: var(--colour-primary);
+    font-family: var(--General-Sans);
+    font-weight: 500;
+    transition: all ease-out 0.15s;
+}
+
+button:hover {
+    border-color: var(--colour-accent);
+    color: var(--colour-accent);
+    transform: scale(108%);
+}
+
+/* button:active {
+    border-color: var(--colour-primary);
+    background-color: var(--colour-accent);
+    color: var(--colour-primary);
+} */
+
+button.active {
+    border-color: var(--colour-primary);
+    background-color: var(--colour-accent);
+    color: var(--colour-primary);
+}
+
+/* button.disabled:hover {
+    border-color: var(--colour-primary);
+    color: var(--colour-primary);
+    transform: scale(100%);
+} */
+
+/* HEADER */
+header {
+    display: flex;
+    max-height: 10vh;
+    padding: 1.2rem 5vw 1.2rem 5vw;
+    justify-content: space-between;
+    background-color: #181c20b0;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+}
+
+header .wordmark {
+    max-height: 2.5rem;
+    cursor: pointer;
+    filter: invert(0);
+}
+
+header .wordmark:hover {
+    filter: brightness(0) saturate(100%) invert(47%) sepia(11%) saturate(3652%) hue-rotate(213deg) brightness(97%) contrast(100%);
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.header-nav a:hover {
+    color: var(--colour-accent);
+    text-decoration-color: var(--colour-accent);
+}
+
+a.active {
+    color: var(--colour-accent);
+    text-decoration-color: var(--colour-accent);
+}
+
+/* HERO */
 .hero {
+    position: relative;
+    height: 90vh;
+}
+
+.hero h1 {
+    position: relative;
+    /* right: .4rem; */
+}
+
+h1 .pink {
+    color: var(--colour-secondary);
+}
+
+h1 .purple {
+    color: var(--colour-accent);
+}
+
+.hero .lettermark {
+    filter: brightness(0) saturate(100%) invert(17%) sepia(13%) saturate(1367%) hue-rotate(160deg) brightness(95%) contrast(86%);
+    width: 960px;
+    z-index: -999;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.hero .lnr-smile {
+    color: var(--colour-accent);
+    position: absolute;
+    font-size: 15rem;
+    text-decoration: none;
+    right: -25px;
+    bottom: 25px;
+    transform: rotate(45deg);
+    transition: transform ease 0.2s;
+}
+
+.hero .lnr-smile:hover {
+    transform: scale(108%)
+}
+
+/* WORK FILTERS */
+
+.filters {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.filters .filter-btn {
+    font-size: 2.5rem;
+    padding: 0.2rem 1rem;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/* WORK FILTER CONTENT */
+.main-work {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    gap: 2.5rem;
+}
+.work-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 100%;
 }
 
-.hero a {
-    text-decoration: none;
-    text-align: center;
+.work-cont h2 {
+    padding-top: 1rem;
 }
 
-.hero a:hover {
-    transform: scale(1.05);
+.work-cont h2:hover {
+    color: var(--colour-accent);
 }
 
-.hero > * {
+.imgbtn {
+    position: relative;
+}
+
+.filter-cont {
     transition: all ease 0.5s;
+    position: relative;
 }
 
-.hero a:hover > * {
-    color: var(--colour-light);
+.filter-cont:hover  {
+    transform: scale(102%);
+}
+
+.filter-cont img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: cover;
+    z-index: 0;
+    transition: all ease 0.5s;
+    position: relative;
+}
+
+.filter-cont img,
+.filter-cont h2 {
+    cursor: pointer;
+}
+
+button.disabled {
+    font-size: 2.5rem;
+    padding: 0.2rem 1rem;
+    position: absolute;
+    bottom: -3%;
+    right: -0.25%;
+    cursor: pointer;
+}
+
+.filter-cont .cyberpunk {
+    object-position: 50% 15%;
+}
+
+.work-cont > h3 {
+    width: auto;
+    text-align: right;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: #f6b8c200;
+    transition: all ease-out 0.15s;
+}
+
+.work-cont > h3:hover{
+    width: auto;
+    text-align: right;
+    text-decoration-color: var(--colour-secondary);
+    transform: scale(102%);
+}
+
+.work-cont > h3 a {
+    color: var(--colour-secondary);
+    text-decoration: none;
+}
+
+.work-cont > h3 a:hover{
+    transform: rotate(360deg);
+}
+
+/* ABOUT */
+
+.hero.about {
+    height: fit-content;
+}
+
+.hero .about {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: min-content;
+    height: 45vw;
+    padding-top: 1.6rem;
+    gap: 1.6rem;
+
+}
+
+.about p {
+    margin-right: 2.5rem;
+    font-size: 1.6rem;
+}
+
+.about p:nth-child(3) {
+    grid-row: 2 / 11;
+}
+
+.about img {
+    object-fit: cover;
+    min-width: 45vw;
+    height: 45vw;
+    grid-column: 2 / 3;
+    grid-row: 1 / 11;
+}
+
+.hero.about .lettermark {
+    left: 0;
+}
+
+.hero.about .lnr-smile {
+    bottom: unset;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--colour-grey);
+    margin: 6.6rem 0 -5vw 0;
+    height: 100vh;
+    padding: 10vw 5vw 2.5vw 5vw;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+footer > h1 {
+    font-weight: 500;
+    width: 44vw;
+    height: fit-content;
+}
+
+footer > h1 > em {
+    font-weight: 700;
+    color: var(--colour-accent);
+}
+
+footer > h1 .lnr {
+    margin-left: 4rem;
+    position: absolute;
+    color: var(--colour-accent);
+    text-decoration: none;
+    transition: all ease-out 0.3s;
+}
+
+footer > h1 .lnr:hover {
+    font-size: 7.6rem;
+    transform: rotate(360deg);
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+footer ul li {
+    width: fit-content;
+}
+
+footer ul h3 {
+    width: auto;
+}
+
+footer img {
+    display: flex;
+    height: 6.6rem;
+    margin-left: auto;
+    margin-right: auto;
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+/* WORK (PAGE)*/
+
+.title {
+    margin-top: 1.6rem;
+    margin-bottom: 2.5rem;
+}
+
+.title h1 {
+    color: var(--colour-secondary);
 }
