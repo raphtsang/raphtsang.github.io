@@ -141,15 +141,17 @@ header .wordmark:hover {
     filter: brightness(0) saturate(100%) invert(47%) sepia(11%) saturate(3652%) hue-rotate(213deg) brightness(97%) contrast(100%);
 }
 
-.header-nav {
+.nav-list {
     display: flex;
     flex-direction: row;
     gap: 2.5rem;
     font-size: 1.6rem;
     font-weight: 500;
+    transition: all ease 1s;
+    z-index: 4;
 }
 
-.header-nav a:hover {
+.nav-list a:hover {
     color: var(--colour-accent);
     text-decoration-color: var(--colour-accent);
 }
@@ -158,6 +160,46 @@ a.active {
     color: var(--colour-accent);
     text-decoration-color: var(--colour-accent);
 }
+
+/* nav button {
+    border: none;
+    background-color: #00000000;
+    visibility: hidden;
+    position: absolute;
+    right: 5vw;
+} */
+
+/* nav .lnr-smile  */
+#menu-smiley {
+    color: var(--colour-accent);
+    font-size: 2.5rem;
+    text-decoration: none;
+    visibility: hidden;
+    position: absolute;
+    right: 5vw;
+}
+
+.nav-list .lnr-cross {
+    color: var(--colour-accent);
+    font-size: 2.5rem;
+    text-decoration: none;
+    visibility: hidden;
+    position: absolute;
+    right: 5vw;
+}
+
+#overlay {
+    position: fixed;
+    display: none; 
+    width: 100%;
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00000000;
+    z-index: 3; 
+  }
 
 /* HERO */
 .hero {
@@ -205,6 +247,7 @@ h1 .purple {
 /* WORK FILTERS */
 
 .filters {
+    margin: 0 -5vw;
     display: flex;
     gap: 1.6rem;
 }
@@ -212,6 +255,14 @@ h1 .purple {
 .filters .filter-btn {
     font-size: 2.5rem;
     padding: 0.2rem 1rem;
+}
+
+.filters .filter-btn:first-child{
+    margin-left: 5vw;
+}
+
+.filters .filter-btn:last-child{
+    margin-right: 5vw;
 }
 
 .hide {

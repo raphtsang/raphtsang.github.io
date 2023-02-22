@@ -42,6 +42,12 @@
         visibility: hidden;
     }
 
+    button:hover {
+        border-color: var(--colour-accent);
+        color: var(--colour-accent);
+        transform: scale(1);
+    }
+
     footer {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -81,12 +87,49 @@
         width: auto;
     }
 
+    /* nav .lnr-smile  */
+    #menu-smiley {
+        visibility: visible;
+    }
+
+    nav .nav-list {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 5vw;
+        transform: translateX(50vw);
+        width: 40vw;
+        height: 100vh;
+        box-sizing: border-box;
+        background-color: var(--colour-bg);
+        flex-direction: column;
+        text-align: right;
+        /* box-shadow: 0px 0px 0px 3px var(--colour-primary);
+        border-radius: 1rem; */
+        /* border-style: solid;
+        border-color: var(--colour-primary); */
+        backdrop-filter: blur(3px);
+        background-color: #181c2050;
+        box-shadow: 8px 0px 8px 4px #e1e5e850;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }    
+
+    nav .nav-list li:nth-child(2) {
+        padding-top: 1.6rem;
+    }
+
+    .nav-list .lnr-cross {
+        transition: all ease 0.3s;
+        visibility: visible;
+    }
+
     .hero .lettermark {
         position: relative;
         /* bottom: 0; */
         top: -2vh;
         left: 0;
-        width: max-content;
+        width: 90vw;
     }
 
     .hero .lnr-smile {
@@ -103,5 +146,54 @@
 
     footer > h1 .lnr {
         margin-left: 1rem;
+    }
+}
+
+/* SCROLLBAR */
+@media screen and (min-width: 660px){
+    ::-webkit-scrollbar {
+        height: 14px;
+        width: 14px;
+    }
+    
+    /* ::-webkit-scrollbar-track {
+        background-color: var(--color-bg);
+    } */
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--colour-light);
+        box-shadow: inset 0px 0px 0px 3px var(--colour-bg);
+        border-radius: 7px;
+    }
+}
+
+/* HEIGHT */
+
+@media screen and (max-height: 840px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-height: 560px) and (max-width: 660px) {
+    h1 {
+        width: auto;
+    }
+}
+
+@media screen and (max-height: 550px) {
+    footer {
+        height: 125vh;
+    }
+    footer img {
+        height: 4rem;
     }
 }

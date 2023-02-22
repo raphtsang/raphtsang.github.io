@@ -4,21 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/media-queries.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media-queries.css">
     <!-- to import icons from linearicons from https://linearicons.com/ -->
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-    <title>Raph Tsang Portfolio</title>
+    <title>Raph Tsang Design</title>
 </head>
 <body>
     <header>
         <img class="wordmark" onclick="goHome()" src="/res/svg/raphtsang-Wordmark.svg" alt="Raphtsang's Logo (wordmark)">
-        <ul class="header-nav">
-            <li><a href="/html/work.html">work</a></li>
-            <li><a href="/html/about.html">about</a></li>
-            <li><a href="mailto:raphaeltsang88@gmail.com">contact</a></li>
-        </ul>
+        <nav class="header-nav">
+            <div id="overlay"></div>
+            <a href="#" id="menu-smiley" class="lnr lnr-smile"></a>
+            <!-- <button class="nav-icon" type="button">
+                <a href="#" class="lnr lnr-smile"></a>
+            </button> -->
+            <ul class="nav-list">
+                <li><a href="#" id="menu-cross" class="lnr lnr-cross"></a></li>
+                <li><a href="/html/work.html">work</a></li>
+                <li><a href="/html/about.html">about</a></li>
+                <li><a href="mailto:raphaeltsang88@gmail.com">contact</a></li>
+            </ul>
+        </nav>
     </header>    
     <div class="hero">
             <h1><br><em class="pink">Hi.</em><br><br>I'm <a href="/html/about.html">Raphael Tsang</a>,<br> a <em class="purple">UI/UX</em> Designer!</h1>
