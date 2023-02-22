@@ -43,19 +43,33 @@ function off() {
   document.getElementById("overlay").style.display = "none";
 }
 
+function displayOn() {
+  navList.style.display = "flex";
+}
+
+function displayOff() {
+  navList.style.display = "none";
+}
+
+function menuSlideOn() {
+  navList.style.transform = "translateX(0)";
+}
+
 // Open and Close Menu
 function openMenu() {
-  navList.style.transform = "translateX(0)";
+  displayOn();
+  setTimeout(menuSlideOn,100);
   on();
 }
 
 function closeMenu() {
-  menuCross.style.transform = "rotate(45deg)"
-  console.log("done");
+  // menuCross.style.transform = "rotate(45deg)"
+  // console.log("done");
   navList.style.transform = "translateX(50vw)";
   off();
-  setTimeout(menuCross.style.transform = "rotate(0deg)")
-  console.log("done");
+  setTimeout(displayOff,500);
+  // setTimeout(menuCross.style.transform = "rotate(0deg)")
+  // console.log("done");
 }
 
 // Smiley Open

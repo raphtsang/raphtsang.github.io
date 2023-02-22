@@ -35,11 +35,11 @@
     }
 
     .hero.about .lettermark {
-        visibility: hidden;
+        display: none;
     }
     
     .hero.about .lnr-smile {
-        visibility: hidden;
+        display: none;
     }
 
     button:hover {
@@ -89,11 +89,11 @@
 
     /* nav .lnr-smile  */
     #menu-smiley {
-        visibility: visible;
+        display: block;
     }
 
     nav .nav-list {
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         padding: 5vw;
@@ -108,11 +108,13 @@
         border-radius: 1rem; */
         /* border-style: solid;
         border-color: var(--colour-primary); */
-        backdrop-filter: blur(3px);
+        backdrop-filter: blur(4px);
         background-color: #181c2050;
-        box-shadow: 8px 0px 8px 4px #e1e5e850;
-        border-top-left-radius: 1rem;
-        border-bottom-left-radius: 1rem;
+        box-shadow: 10px 0px 8px 4px #e1e5e850;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        z-index: 6;
+        display: none;
     }    
 
     nav .nav-list li:nth-child(2) {
@@ -120,8 +122,8 @@
     }
 
     .nav-list .lnr-cross {
-        transition: all ease 0.3s;
         visibility: visible;
+        transition: all ease 0.3s;
     }
 
     .hero .lettermark {
@@ -133,7 +135,7 @@
     }
 
     .hero .lnr-smile {
-        visibility: hidden;
+        display: none;
     }
 
     .filters {
