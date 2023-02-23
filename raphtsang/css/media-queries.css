@@ -182,6 +182,16 @@
         overflow-x: scroll;
     }
 
+    .cont-hero {
+        height: 75vh;
+    }
+
+    .cont-brief {
+        flex-direction: column;
+        width: auto;
+        gap: 0.6rem;
+    }
+
     footer h1 {
         width: 85vw;
     }
@@ -222,6 +232,9 @@
 
     h3 {
         font-size: 1.6rem;
+    }
+    h4 {
+        font-size: 1.1rem;
     }
 }
 
