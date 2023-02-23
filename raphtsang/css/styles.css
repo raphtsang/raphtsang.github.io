@@ -159,7 +159,7 @@ header .wordmark:hover {
     font-size: 1.6rem;
     font-weight: 500;
     transition: all ease 1s;
-    z-index: 5;
+    /* z-index: 5; */
 }
 
 .nav-list a:hover {

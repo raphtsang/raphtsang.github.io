@@ -43,9 +43,9 @@
     }
 
     button:hover {
-        border-color: var(--colour-accent);
-        background-color: var(--colour-grey);
-        color: var(--colour-accent);
+        border-color: var(--colour-primary);
+        background-color: var(--colour-accent);
+        color: var(--colour-primary);
         transform: scale(1);
     }
 
