@@ -3,36 +3,49 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 
 // Home
-function goHome(){    location.href='/'; }
+function goHome(){    location.href='/raphtsang/'; }
 // UI/UX
-function goWork(){    location.href='/html/work.html'; }
+function goWork(){    location.href='/raphtsang/html/work.html'; }
 // UI/UX
-function goUIUX(){    location.href='/html/uiux.html'; }
+function goUIUX(){    location.href='/raphtsang/html/uiux.html'; }
 // Graphic
-function goGraphic(){    location.href='/html/graphic.html'; }
+function goGraphic(){    location.href='/raphtsang/html/graphic.html'; }
 // Furniture Galore
-function goFG(){    location.href='/html/furniture-galore.html'; }
+function goFG(){    location.href='/raphtsang/html/furniture-galore.html'; }
 // The Banking App
-function goTBA(){    location.href='/html/the-banking-app.html'; }
+function goTBA(){    location.href='/raphtsang/html/the-banking-app.html'; }
 // Sony Brand Refresh
-function goSony(){    location.href='/html/sony-brand-refresh.html'; }
+function goSony(){    location.href='/raphtsang/html/sony-brand-refresh.html'; }
 // Neon and Cyberpunk
-function goNeon(){    location.href='/html/neon-and-cyberpunk.html'; }
+function goNeon(){    location.href='/raphtsang/html/neon-and-cyberpunk.html'; }
 // Inspirock
-function goInsp(){    location.href='/html/inspirock.html';}
+function goInsp(){    location.href='/raphtsang/html/inspirock.html';}
 // Mario World
-function goMario(){    location.href='/html/mario-world.html';}
+function goMario(){    location.href='/raphtsang/html/mario-world.html';}
 // Frame vs. Field
-function goFVF(){    location.href='/html/frame-vs-field.html';}
+function goFVF(){    location.href='/raphtsang/html/frame-vs-field.html';}
 // Slchld Vinyl
-function goSlchld(){    location.href='/html/slchld-vinyl.html';}
+function goSlchld(){    location.href='/raphtsang/html/slchld-vinyl.html';}
 // Outfit Colour Index
-function goOutfit(){    location.href='/html/outfit-coulour-index.html';}
+function goOutfit(){    location.href='/raphtsang/html/outfit-coulour-index.html';}
 
 let menuSmiley = document.getElementById("menu-smiley");
 let menuCross = document.getElementById("menu-cross");
 let overlay = document.getElementById("overlay");
 let navList = document.querySelector(".nav-list")
+// let mobilePopup = document.querySelector(".mobile-popup");
+
+
+// // Mobile Popup (New Trial)
+
+// function openMenu () {
+//   mobilePopup.style.transform = "translateX(0)";
+// }
+
+// function closeMenu () {
+//   mobilePopup.style.transform = "translateX(50vw)"
+// }
+
 
 // Overlay On/Off - for detecting click outside of popups
 function on() {
@@ -43,13 +56,13 @@ function off() {
   document.getElementById("overlay").style.display = "none";
 }
 
-function displayOn() {
-  navList.style.display = "flex";
-}
+// function displayOn() {
+//   navList.style.display = "flex";
+// }
 
-function displayOff() {
-  navList.style.display = "none";
-}
+// function displayOff() {
+//   navList.style.display = "none";
+// }
 
 function menuSlideOn() {
   navList.style.transform = "translateX(0)";
@@ -57,8 +70,8 @@ function menuSlideOn() {
 
 // Open and Close Menu
 function openMenu() {
-  displayOn();
-  setTimeout(menuSlideOn,100);
+  // displayOn();
+  menuSlideOn();
   on();
 }
 
@@ -67,7 +80,7 @@ function closeMenu() {
   // console.log("done");
   navList.style.transform = "translateX(50vw)";
   off();
-  setTimeout(displayOff,500);
+  // displayOff();
   // setTimeout(menuCross.style.transform = "rotate(0deg)")
   // console.log("done");
 }

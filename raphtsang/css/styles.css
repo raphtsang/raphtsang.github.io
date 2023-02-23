@@ -126,7 +126,7 @@ header {
     padding: 1.2rem 5vw 1.2rem 5vw;
     justify-content: space-between;
     background-color: #181c20b0;
-    backdrop-filter: blur(4px);
+    /* backdrop-filter: blur(4px); */
     box-shadow: 0px -10px 8px 4px #e1e5e850;
     z-index: 4;
     position: sticky;
@@ -210,6 +210,11 @@ a.active {
     background-color: #00000000;
     z-index: 3; 
   }
+
+.mobile-nav {
+    display: none;
+}
+
 
 /* HERO */
 .hero {
