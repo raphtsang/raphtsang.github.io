@@ -265,6 +265,7 @@ h1 .purple {
     margin: 0 -5vw;
     display: flex;
     gap: 1.6rem;
+    z-index: 7;
 }
 
 .filters .filter-btn {
