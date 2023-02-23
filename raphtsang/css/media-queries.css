@@ -157,6 +157,10 @@
         text-decoration: none;
     } */
 
+    .hero {
+        height: 80vh;
+    }
+    
     .hero h1 br:first-child {
         display: none;
     }
