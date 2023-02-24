@@ -72,6 +72,12 @@ h4 {
     color: var(--colour-primary);
 }
 
+h5 {
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: var(--colour-light);
+}
+
 p {
     font-size: 1.125rem;
     color: var(--colour-light);
@@ -435,6 +441,7 @@ button.disabled {
     height: 45vw;
     grid-column: 2 / 3;
     grid-row: 1 / 11;
+    z-index: 1;
 }
 
 .hero.about .lettermark {
@@ -443,6 +450,7 @@ button.disabled {
 
 .hero.about .lnr-smile {
     bottom: unset;
+    z-index: 10;
 }
 
 /* WORK CONTENT */

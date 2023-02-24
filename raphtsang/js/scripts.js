@@ -2,6 +2,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
   });
 
+  // ADD AOS CLASS 
+  const allAOS = document.querySelectorAll("h1, h2, h3, h4, h5, p");
+  allAOS.forEach(element => {
+    element.classList.add("aos");
+    console.log("added AOS");    
+  });
+
   // INTERSECTION OBSERVER FOR ANIMATE ON SCROLL
 const intObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {

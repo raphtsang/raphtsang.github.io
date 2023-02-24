@@ -25,13 +25,15 @@
         grid-column: auto;
         grid-row: auto;
         aspect-ratio: 1 / 1;
-        min-width: 100%;
+        width: 100%;
         height: auto;
     }
 
     .hero .about p{
         grid-column: auto;
         grid-row: auto;
+        margin-right: 0;
+        /* font-size: 1.125rem; */
     }
 
     .hero.about .lettermark {
@@ -47,6 +49,10 @@
         background-color: var(--colour-accent);
         color: var(--colour-primary);
         transform: scale(1);
+    }
+
+    .filter-cont img {
+        height: 45vh;
     }
 
     footer {
@@ -190,6 +196,8 @@
     .filters {
         overflow-x: scroll;
     }
+
+
 
     .cont-hero {
         height: 75vh;
