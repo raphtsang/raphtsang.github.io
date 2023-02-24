@@ -73,8 +73,13 @@ h4 {
 }
 
 p {
+    font-size: 1.125rem;
     color: var(--colour-light);
-    line-height: 1.1;
+    line-height: 1.2;
+}
+
+p > em {
+    font-weight: 500;
 }
 
 a {
@@ -164,7 +169,7 @@ header .wordmark:hover {
     gap: 2.5rem;
     font-size: 1.6rem;
     font-weight: 500;
-    transition: all ease 1s;
+    /* transition: all ease 1s; */
     /* z-index: 5; */
 }
 
@@ -264,6 +269,21 @@ h1 .purple {
 
 .hero .lnr-smile:hover {
     transform: scale(108%)
+}
+
+/* ANIMATE ON SCROLL */
+
+.aos {
+    opacity: 0;
+    /* filter: blur(100px); */
+    transform: translateX(0.25rem);
+    transition: all 0.8s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
 }
 
 /* WORK FILTERS */
@@ -451,6 +471,7 @@ button.disabled {
     flex-direction: row;
     gap: 1.6rem;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .cont-brief .cont-subject {
@@ -466,6 +487,101 @@ button.disabled {
 .cont-brief .cont-tools {
     flex: 1;
 }
+
+.content h3 {
+    color: var(--colour-accent);
+}
+
+.content .img-container {
+    flex: 2;
+    width: 66%;
+}
+
+.content img {
+    /* max-height: 70vh; */
+    /* aspect-ratio: auto; */
+    width: 100%;
+    height: auto;
+}
+
+.content > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.6rem;
+}
+
+.content > div > h3 {
+    flex-basis: 100%;
+}
+
+.cont-right-img p {
+    flex: 1;
+}
+
+.cont-left-img p {
+    flex: 1;
+}
+
+.content .cont-left-img .img-container {
+    /* flex: 1;
+    width: 50%; */
+}
+
+.content .text-container {
+    flex: 1;
+    /* width: 50%; */
+    align-self: flex-end;
+}
+
+.content .text-container h3 {
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+
+/* Extra line height on bullet points */
+/* .cont-right-img p:nth-child(2) br:nth-child(n+3) {
+    display: block;
+    content: '';
+    margin-top: 0.5vh;
+} */
+
+/* LIGHTBOX */
+
+#lightbox {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #181c2080;
+    display: none;
+}
+
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox.active img {
+    max-width: 95%;
+    aspect-ratio: auto;
+    max-height: 95%;
+    object-fit: contain;
+}
+
+.lit-img {
+    cursor: pointer;
+    transition: all ease 0.15s;
+}
+
+.lit-img:hover {
+    transform: scale(1.02);
+}
+
 
 
 /* FOOTER */

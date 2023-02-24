@@ -64,6 +64,10 @@
 }
 
 @media screen and (max-width: 850px) {
+    .content .img-container {
+        min-width: 100%;
+    }
+
     footer {
         padding-top: 15vh;
     }
@@ -88,6 +92,10 @@
         width: auto;
     }
 
+    p {
+        line-height: 1.2;
+    }
+
     /* nav .lnr-smile  */
     #menu-smiley {
         display: block;
@@ -99,6 +107,7 @@
         left: auto;
         top: 0;
         padding: 5vw;
+        transition: all ease 1s;
         transform: translateX(50vw);
         width: 40vw;
         height: 100vh;
@@ -190,7 +199,7 @@
         flex-direction: column;
         width: auto;
         gap: 0.6rem;
-    }
+    }    
 
     footer h1 {
         width: 85vw;
@@ -234,7 +243,7 @@
         font-size: 1.6rem;
     }
     h4 {
-        font-size: 1.1rem;
+        font-size: 1.25rem;
     }
 }
 
@@ -250,5 +259,13 @@
     }
     footer img {
         height: 4rem;
+    }
+}
+
+/* AOS REDUCED MOTION */
+
+@media(prefers-reduced-motion) {
+    .aos {
+        transition: none;
     }
 }

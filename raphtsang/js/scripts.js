@@ -2,6 +2,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
   });
 
+  // INTERSECTION OBSERVER FOR ANIMATE ON SCROLL
+const intObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+      // setTimeout(() => {
+        entry.target.classList.add("show");
+      // }, 50)
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+});
+
+// ANIMATE ON SCROLL 
+const AOSElements = document.querySelectorAll(".aos");
+AOSElements.forEach((el) => intObserver.observe(el));
+
+
+
+
 // Home
 function goHome(){    location.href='/raphtsang/'; }
 // UI/UX
@@ -137,6 +158,31 @@ filterButtons.forEach((button) => {
     });
   });
 });
+
+// LIGHTBOX
+const lightBox = document.createElement("div");
+lightBox.id = "lightbox"
+document.body.appendChild(lightBox);
+
+const litImages = document.querySelectorAll(".lit-img");
+litImages.forEach(image => {
+  image.addEventListener("click", e => {
+    lightBox.classList.add("active");
+    const img = document.createElement("img");
+    img.src = image.src
+    while (lightBox.firstChild) {
+      lightBox.removeChild(lightBox.firstChild);
+    }
+    lightBox.appendChild(img);
+  });
+});
+
+lightBox.addEventListener("click", e => {
+  if(e.target !== e.currentTarget) return;
+  lightBox.classList.remove("active");
+})
+
+
 
 let maxWidth = window.matchMedia("(max-width: 660px)");
 mediaQuery(maxWidth);
