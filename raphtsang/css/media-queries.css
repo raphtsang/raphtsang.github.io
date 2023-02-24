@@ -55,6 +55,10 @@
         height: 45vh;
     }
 
+    .content p.align {
+        flex: 1;
+    }
+
     footer {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -73,6 +77,19 @@
     .content .img-container {
         min-width: 100%;
     }
+
+    .content .img-grid {
+        min-width: 100%;
+        gap: 0.625rem;
+    }
+
+    .content .cont-three-img .img-container {
+        gap: 0.625rem;
+    }
+
+    /* .content .cont-four-img {
+        flex-direction: column;
+    } */
 
     footer {
         padding-top: 15vh;
@@ -197,8 +214,6 @@
         overflow-x: scroll;
     }
 
-
-
     .cont-hero {
         height: 75vh;
     }
@@ -206,7 +221,7 @@
     .cont-brief {
         flex-direction: column;
         width: auto;
-        gap: 0.6rem;
+        gap: 0.625rem;
     }    
 
     footer h1 {
