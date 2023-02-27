@@ -229,7 +229,7 @@
     }    
 
     footer {
-        height: 115vh;
+        height: 125vh;
     }
 
     /* footer h1 {
@@ -286,7 +286,7 @@
 
 @media screen and (max-height: 550px) {
     footer {
-        height: 125vh;
+        height: 135vh;
     }
     footer img {
         height: 4rem;
