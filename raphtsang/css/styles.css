@@ -433,8 +433,18 @@ button.disabled {
     font-size: 1.6rem;
 }
 
-.about p:nth-child(3) {
+.about p:nth-child(5) {
     grid-row: 2 / 11;
+}
+
+.about h3 {
+    color: var(--colour-accent);
+}
+
+.about h3 a {
+    color: var(--colour-primary);
+    font-size: 1.6rem;
+    /* font-weight: 300; */
 }
 
 .about img {

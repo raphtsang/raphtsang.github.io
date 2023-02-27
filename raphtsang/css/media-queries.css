@@ -228,6 +228,10 @@
         gap: 0.625rem;
     }    
 
+    footer {
+        height: 115vh;
+    }
+
     footer h1 {
         width: 85vw;
     }
