@@ -121,7 +121,7 @@
 
     p {
         line-height: 1.2;
-    }
+    }   
 
     /* nav .lnr-smile  */
     #menu-smiley {
@@ -232,9 +232,9 @@
         height: 115vh;
     }
 
-    footer h1 {
+    /* footer h1 {
         width: 85vw;
-    }
+    } */
 
     footer > h1 .lnr {
         margin-left: 1rem;
@@ -298,5 +298,44 @@
 @media(prefers-reduced-motion) {
     .aos {
         transition: none;
+    }
+}
+
+/* WIDTH - X-SMALL SCREENS */
+
+@media screen and (max-width: 380px) {
+    .hero h1 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px) and (max-height: 840px) {
+    /* h1 {
+        font-size: 4rem;
+    } */
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        line-height: 1.2;
+    }
+
+    .filters {
+        gap: 1rem;
+    }
+
+    .filters .filter-btn, 
+    button.disabled {
+        font-size: 1.6rem;
     }
 }

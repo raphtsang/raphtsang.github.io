@@ -30,6 +30,7 @@ body {
     font-family: var(--General-Sans);
     background-color: var(--colour-bg);
     font-weight: 300;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -548,6 +549,10 @@ button.disabled {
     flex: 1;
     /* width: 50%; */
     align-self: flex-end;
+}
+
+.content .text-container.tba {
+    align-self: flex-start;
 }
 
 .content .text-container h3 {
