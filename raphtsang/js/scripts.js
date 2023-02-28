@@ -6,7 +6,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const allAOS = document.querySelectorAll("h1, h2, h3, h4, h5, p");
   allAOS.forEach(element => {
     element.classList.add("aos");
-    console.log("added AOS");    
+    // console.log("added AOS");    
+  });
+
+  // ADD AOS-no-X CLASS 
+  const addAOSnoX = document.querySelectorAll(".img-container");
+  addAOSnoX.forEach(element => {
+    element.classList.add("aos-no-x");
+    console.log("added AOSnoX");    
   });
 
   // INTERSECTION OBSERVER FOR ANIMATE ON SCROLL
@@ -25,7 +32,9 @@ const intObserver = new IntersectionObserver((entries) => {
 
 // ANIMATE ON SCROLL 
 const AOSElements = document.querySelectorAll(".aos");
+const AOSnoXElements = document.querySelectorAll(".aos-no-x")
 AOSElements.forEach((el) => intObserver.observe(el));
+AOSnoXElements.forEach((el) => intObserver.observe(el));
 
 
 
@@ -191,6 +200,6 @@ lightBox.addEventListener("click", e => {
 
 
 
-let maxWidth = window.matchMedia("(max-width: 660px)");
-mediaQuery(maxWidth);
-maxWidth.addEventListener("change", mediaQuery);
+// let maxWidth = window.matchMedia("(max-width: 660px)");
+// mediaQuery(maxWidth);
+// maxWidth.addEventListener("change", mediaQuery);

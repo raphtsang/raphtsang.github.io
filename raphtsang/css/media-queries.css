@@ -228,6 +228,17 @@
         gap: 0.625rem;
     }    
 
+    .cont-grid-img.ten-mockups .img-grid {
+        /* column-gap: 0; */
+        grid-row: 5 / 6;
+        grid-column: 1 / 2;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .cont-grid-img.ten-mockups .img-grid img:nth-child(8) {
+        display: none;
+    }
+
     footer {
         height: 125vh;
     }
