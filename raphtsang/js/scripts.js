@@ -193,6 +193,25 @@ litImages.forEach(image => {
   });
 });
 
+// VIDEO
+const litVideos = document.querySelectorAll(".lit-vid");
+litVideos.forEach(video => {
+  video.addEventListener("click", e => {
+    lightBox.classList.add("active");
+    const vids = document.createElement("video");
+    vids.src = video.src
+    while (lightBox.firstChild) {
+      lightBox.removeChild(lightBox.firstChild);
+    }
+    lightBox.appendChild(vids);
+    const lightVid = lightBox.querySelector("video");
+    lightVid.setAttribute("autoplay", "");
+    lightVid.setAttribute("loop", "");
+    lightVid.setAttribute("controls", "");
+    lightVid.setAttribute("controlslist", "nodownload");
+  });
+});
+
 lightBox.addEventListener("click", e => {
   if(e.target !== e.currentTarget) return;
   lightBox.classList.remove("active");

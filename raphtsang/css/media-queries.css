@@ -239,6 +239,11 @@
         display: none;
     }
 
+    .cont-spread-img .img-container h5 {
+        margin-top: 0.6rem;
+        margin-bottom: 1rem;
+    }    
+
     footer {
         height: 125vh;
     }
