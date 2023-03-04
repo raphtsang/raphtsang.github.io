@@ -676,6 +676,7 @@ iframe {
 
 .cont-spread-img .img-container {
     display: flex;
+    flex-basis: 100%;
     flex-direction: column;
 }
 
@@ -688,6 +689,19 @@ iframe {
     align-self: flex-start;
 }
 
+.content p + h3 {
+    margin-top: 1rem;
+}
+
+.content .cont-left-img.caption-margin h5 {
+    margin-top: 1rem;
+    margin-bottom: 1.6rem;
+}
+
+.text-container.two-col {
+    display: flex;
+    gap: 1.6rem;
+}
 
 /* Extra line height on bullet points */
 /* .cont-right-img p:nth-child(2) br:nth-child(n+3) {

@@ -67,6 +67,10 @@
         filter: invert(0);
     }
 
+    .furniture-galore.invert {
+        filter: invert(100%);
+    }
+
     footer {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -247,6 +251,10 @@
         margin-top: 0.6rem;
         margin-bottom: 1rem;
     }    
+
+    .text-container.two-col {
+        flex-direction: column;
+    }
 
     footer {
         height: 125vh;
