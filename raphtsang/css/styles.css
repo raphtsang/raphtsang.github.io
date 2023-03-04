@@ -391,6 +391,18 @@ button.disabled {
     object-position: 50% 15%;
 }
 
+.furniture-galore:hover {
+    filter: invert(100%);
+}
+
+.invert {
+    filter: invert(100%);
+}
+
+.invert:hover {
+    filter: invert(0);
+}
+
 .work-cont > h3 {
     width: auto;
     text-align: right;
