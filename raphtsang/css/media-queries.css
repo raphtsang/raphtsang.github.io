@@ -3,6 +3,18 @@
         width: 63vw;
     } */
 
+    body {
+        cursor: default;
+    }
+
+    #cursor {
+        display: none;
+    }
+
+    #cursor.grow {
+        display: none;
+    }
+
     .hero .lettermark {
         width: 50vw;
     }
@@ -86,6 +98,7 @@
 }
 
 @media screen and (max-width: 850px) {
+
     .content .img-container {
         min-width: 100%;
     }
@@ -291,6 +304,18 @@
 /* HEIGHT */
 
 @media screen and (max-height: 840px) {
+    body {
+        cursor: default;
+    }
+
+    #cursor {
+        display: none;
+    }
+
+    #cursor.grow {
+        display: none;
+    }
+
     h1 {
         font-size: 4rem;
     }
@@ -327,6 +352,10 @@
 @media(prefers-reduced-motion) {
     .aos {
         transition: none;
+    }
+
+    body {
+        cursor: default;
     }
 }
 

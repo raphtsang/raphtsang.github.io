@@ -2,11 +2,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
   });
 
+// Create a media condition that targets viewports at least 850px wide
+const mediaQuery = window.matchMedia('(min-width: 850px)')
+
   // ADD AOS CLASS 
   const allAOS = document.querySelectorAll("h1, h2, h3, h4, h5, p");
   allAOS.forEach(element => {
     element.classList.add("aos");
+    if(mediaQuery.matches) {
     element.style.cursor = "none";
+    }
     // console.log("added AOS");    
   });
 
@@ -14,7 +19,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const addAOSnoX = document.querySelectorAll(".img-container");
   addAOSnoX.forEach(element => {
     element.classList.add("aos-no-x");
+    if(mediaQuery.matches) {
     element.style.cursor = "none";
+    }
     // console.log("added AOSnoX");    
   });
 
@@ -55,30 +62,16 @@ document.body.onpointermove = event => {
 
 const allCursorEvents = document.querySelectorAll("a, button, .wordmark, .img-container, .imgbtn, .filter-cont>h2, .lit-img, .lit-vid, footer > h1 em");
 allCursorEvents.forEach(element => {
-  element.style.cursor = "none";
-  element.addEventListener("mouseover", ()=>{
-    cursor.classList.add("grow");
-  });
-  element.addEventListener("mouseleave", ()=>{
-    cursor.classList.remove("grow");
-  });
+  if (mediaQuery.matches) {
+    element.style.cursor = "none";
+    element.addEventListener("mouseover", ()=>{
+      cursor.classList.add("grow");
+    });
+    element.addEventListener("mouseleave", ()=>{
+      cursor.classList.remove("grow");
+    });
+  }
 });
-
-
-// BLOB
-// const blob = document.getElementById("blob");
-
-// document.body.onpointermove = event => {
-//   const { clientX, clientY } = event;
-  
-//   blob.style.left = `${clientX}px`;
-//   blob.style.top = `${clientY}px`;
-//   // blob.animate({
-//   //   left: `${clientX}px`,
-//   //   top: `${clientY}px`
-//   // }, { duration: 3000, fill: "forwards" });
-// }
-
 
 // Home
 function goHome(){    location.href='/raphtsang/'; }
