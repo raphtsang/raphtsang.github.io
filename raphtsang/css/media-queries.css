@@ -274,6 +274,7 @@
     ::-webkit-scrollbar {
         height: 14px;
         width: 14px;
+        cursor: pointer;
     }
     
     /* ::-webkit-scrollbar-track {

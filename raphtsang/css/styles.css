@@ -31,6 +31,7 @@ body {
     background-color: var(--colour-bg);
     font-weight: 300;
     overflow-x: hidden;
+    cursor: none;
 }
 
 h1, h2, h3, h4 {
@@ -182,10 +183,30 @@ header .wordmark:hover {
     /* z-index: 5; */
 }
 
-.nav-list a:hover {
+/* .nav-list a:hover {
     color: var(--colour-accent);
     text-decoration-color: var(--colour-accent);
+} */
+
+.nav-list li:hover a {
+    color: var(--colour-accent);
+    text-decoration-color: var(--colour-accent);
+    transition: text-decoration-color 0.3s;
 }
+
+/* .nav-list li a {
+    transition: color 0.3s;    
+}
+
+.nav-list li:not(:hover):has( ~ li:hover) a {
+    color: #a9d4d8b0;
+}
+
+.nav-list li:hover ~ li:not(hover) a{
+    color: #a9d4d8b0;
+} */
+
+
 
 a.active {
     color: var(--colour-accent);
@@ -373,10 +394,10 @@ h1 .purple {
     position: relative;
 }
 
-.filter-cont img,
+/* .filter-cont img,
 .filter-cont h2 {
     cursor: pointer;
-}
+} */
 
 button.disabled {
     font-size: 2.5rem;
@@ -747,7 +768,7 @@ iframe {
 }
 
 .lit-img {
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: all ease 0.15s;
 }
 
@@ -760,7 +781,7 @@ iframe {
 }
 
 .lit-vid {
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: all ease 0.15s;
 }
 
@@ -770,6 +791,69 @@ iframe {
 
 .lit-vid:hover + h5 {
     opacity: 0;
+}
+
+/* CURSOR */
+#cursor {
+    background-color: var(--colour-primary);
+    z-index: 200;
+    height: 15px;
+    aspect-ratio: 1;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    mix-blend-mode:exclusion;
+    pointer-events: none;
+    transition: height 0.3s;
+}
+
+#cursor.grow {
+    background-color: var(--colour-light);
+    height: 30px;
+    transition: height 0.3s;
+}
+
+/* #blob {
+    background-color: var(--colour-light);
+    z-index: -3;
+    height: 400px;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(
+        to right,
+        var(--colour-secondary)
+        ,var(--colour-accent)
+    );
+    animation: rotate 30s infinite;
+    filter: blur(100px);
+} */
+
+/* #blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+    backdrop-filter: blur(40px);
+} */
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1 1.5;
+    }
+
+    to {
+        rotate: 360deg;
+    }
 }
 
 /* FOOTER */
