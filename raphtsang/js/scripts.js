@@ -3,14 +3,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 
 // Create a media condition that targets viewports at least 850px wide
-const mediaQuery = window.matchMedia('(min-width: 850px)')
+const mediaQuery = window.matchMedia('(min-width: 850px)');
+// Create a media condition that targets non-touch devices/devices that support hover
+const notTouch = matchMedia('(any-hover: hover)');
 
   // ADD AOS CLASS 
   const allAOS = document.querySelectorAll("h1, h2, h3, h4, h5, p");
   allAOS.forEach(element => {
     element.classList.add("aos");
     if(mediaQuery.matches) {
-    element.style.cursor = "none";
+      if(notTouch.matches) {
+        element.style.cursor = "none";
+      }  
     }
     // console.log("added AOS");    
   });
@@ -20,7 +24,9 @@ const mediaQuery = window.matchMedia('(min-width: 850px)')
   addAOSnoX.forEach(element => {
     element.classList.add("aos-no-x");
     if(mediaQuery.matches) {
-    element.style.cursor = "none";
+      if(notTouch.matches) {
+        element.style.cursor = "none";
+      }  
     }
     // console.log("added AOSnoX");    
   });
@@ -63,13 +69,15 @@ document.body.onpointermove = event => {
 const allCursorEvents = document.querySelectorAll("a, button, .wordmark, .img-container, .imgbtn, .filter-cont>h2, .lit-img, .lit-vid, footer > h1 em");
 allCursorEvents.forEach(element => {
   if (mediaQuery.matches) {
-    element.style.cursor = "none";
-    element.addEventListener("mouseover", ()=>{
-      cursor.classList.add("grow");
-    });
-    element.addEventListener("mouseleave", ()=>{
-      cursor.classList.remove("grow");
-    });
+    if(notTouch.matches) {
+      element.style.cursor = "none";
+      element.addEventListener("mouseover", ()=>{
+        cursor.classList.add("grow");
+      });
+      element.addEventListener("mouseleave", ()=>{
+        cursor.classList.remove("grow");
+      });
+    }
   }
 });
 
@@ -257,9 +265,3 @@ lightBox.addEventListener("click", e => {
 const getInTouch = document.querySelector("footer > h1 em");
 
 getInTouch.addEventListener("click", goEmail);
-
-
-
-// let maxWidth = window.matchMedia("(max-width: 660px)");
-// mediaQuery(maxWidth);
-// maxWidth.addEventListener("change", mediaQuery);

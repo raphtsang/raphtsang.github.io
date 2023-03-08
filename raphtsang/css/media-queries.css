@@ -3,17 +3,18 @@
         width: 63vw;
     } */
 
+/* 
     body {
         cursor: default;
     }
-
+    
     #cursor {
         display: none;
     }
 
     #cursor.grow {
         display: none;
-    }
+    } */
 
     .hero .lettermark {
         width: 50vw;
@@ -304,20 +305,12 @@
 /* HEIGHT */
 
 @media screen and (max-height: 840px) {
-    body {
+    /* body {
         cursor: default;
-    }
-
-    #cursor {
-        display: none;
-    }
-
-    #cursor.grow {
-        display: none;
-    }
+    } */
 
     h1 {
-        font-size: 4rem;
+        font-size: 5rem;
     }
 
     h2 {
@@ -329,6 +322,12 @@
     }
     h4 {
         font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-height: 660px) {
+    h1 {
+        font-size: 4rem;
     }
 }
 
@@ -354,9 +353,9 @@
         transition: none;
     }
 
-    body {
+    /* body {
         cursor: default;
-    }
+    } */
 }
 
 /* WIDTH - X-SMALL SCREENS */
@@ -395,5 +394,15 @@
     .filters .filter-btn, 
     button.disabled {
         font-size: 1.6rem;
+    }
+}
+
+@media (any-hover: none) {
+    #cursor {
+        display: none;
+    }
+
+    #cursor.grow {
+        display: none;
     }
 }
